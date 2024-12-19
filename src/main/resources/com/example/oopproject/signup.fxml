@@ -12,15 +12,20 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="550.0" prefWidth="700.0" style="-fx-background-color: linear-gradient(to bottom, #4b0082, #8b00ff);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oopproject.SignupController">
-    <VBox alignment="CENTER" prefHeight="562.0" prefWidth="700.0" spacing="20" AnchorPane.bottomAnchor="-12.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+<AnchorPane prefHeight="621.0" prefWidth="700.0" style="-fx-background-color: linear-gradient(to bottom, #4b0082, #8b00ff);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oopproject.SignupController">
+
+    <!-- Back Button -->
+    <Button onAction="#handleBack" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #ff6347; -fx-background-radius: 15; -fx-text-fill: white; -fx-font-size: 14px;" text="Back" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+
+    <!-- Main VBox Layout -->
+    <VBox alignment="TOP_CENTER" layoutY="14.0" prefHeight="579.0" prefWidth="700.0" spacing="20" AnchorPane.bottomAnchor="-42.66666666666663" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="14.0">
         <!-- Title -->
-        <Label style="-fx-text-fill: white; -fx-font-size: 36px; -fx-font-weight: bold;" text="Sign Up">
+        <Label prefHeight="32.0" prefWidth="133.0" style="-fx-text-fill: white; -fx-font-size: 36px; -fx-font-weight: bold;" text="Sign Up">
             <font>
                 <Font name="Arial Bold" size="36.0" />
             </font>
         </Label>
-        <ImageView fitHeight="107.0" fitWidth="116.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="64.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true">
             <Image url="@user.png" />
         </ImageView>
 
@@ -56,6 +61,6 @@
 
         <!-- Submit Button -->
         <Button onAction="#handleSubmit" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #34eb77; -fx-background-radius: 25; -fx-text-fill: white; -fx-font-size: 20px;" text="Submit" />
-        <Label fx:id="errorLabel" alignment="CENTER" style="-fx-text-fill: red; -fx-font-size: 14px;" />
+        <Label fx:id="errorLabel" alignment="CENTER" style="-fx-text-fill: yellow; -fx-font-size: 15px;" />
     </VBox>
 </AnchorPane>
