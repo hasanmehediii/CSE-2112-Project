@@ -103,7 +103,7 @@ public class LoginController {
             Parent root = loader.load();
 
             Stage currentStage = (Stage) usernameField.getScene().getWindow();
-            Scene signUpScene = new Scene(root);
+            Scene signUpScene = new Scene(root, 720, 600);
             currentStage.setScene(signUpScene);
             currentStage.sizeToScene();
             currentStage.show();
