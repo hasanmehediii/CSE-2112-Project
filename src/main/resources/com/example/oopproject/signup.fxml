@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="550.0" prefWidth="700.0" style="-fx-background-color: linear-gradient(to bottom, #4b0082, #8b00ff);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oopproject.SignupController">
+    <VBox alignment="CENTER" prefHeight="562.0" prefWidth="700.0" spacing="20" AnchorPane.bottomAnchor="-12.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <!-- Title -->
+        <Label style="-fx-text-fill: white; -fx-font-size: 36px; -fx-font-weight: bold;" text="Sign Up">
+            <font>
+                <Font name="Arial Bold" size="36.0" />
+            </font>
+        </Label>
+        <ImageView fitHeight="107.0" fitWidth="116.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@user.png" />
+        </ImageView>
+
+        <!-- Username -->
+        <HBox alignment="CENTER" spacing="10">
+            <Label style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" text="Username:" />
+            <TextField fx:id="usernameField" prefHeight="40.0" prefWidth="300.0" style="-fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #ffffff; -fx-border-width: 2px;" />
+        </HBox>
+
+        <!-- First Name -->
+        <HBox alignment="CENTER" spacing="10">
+            <Label style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" text="First Name:" />
+            <TextField fx:id="firstNameField" prefHeight="40.0" prefWidth="300.0" style="-fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #ffffff; -fx-border-width: 2px;" />
+        </HBox>
+
+        <!-- Last Name -->
+        <HBox alignment="CENTER" spacing="10">
+            <Label style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" text="Last Name:" />
+            <TextField fx:id="lastNameField" prefHeight="40.0" prefWidth="300.0" style="-fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #ffffff; -fx-border-width: 2px;" />
+        </HBox>
+
+        <!-- Date of Birth -->
+        <HBox alignment="CENTER" spacing="10">
+            <Label style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" text="Date of Birth:" />
+            <DatePicker fx:id="dobField" prefHeight="40.0" prefWidth="300.0" style="-fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #ffffff; -fx-border-width: 2px;" />
+        </HBox>
+
+        <!-- Password -->
+        <HBox alignment="CENTER" spacing="10">
+            <Label style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" text="Password:" />
+            <PasswordField fx:id="passwordField" prefHeight="40.0" prefWidth="300.0" style="-fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #ffffff; -fx-border-width: 2px;" />
+        </HBox>
+
+        <!-- Submit Button -->
+        <Button onAction="#handleSubmit" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #34eb77; -fx-background-radius: 25; -fx-text-fill: white; -fx-font-size: 20px;" text="Submit" />
+        <Label fx:id="errorLabel" alignment="CENTER" style="-fx-text-fill: red; -fx-font-size: 14px;" />
+    </VBox>
+</AnchorPane>

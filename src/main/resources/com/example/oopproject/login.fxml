@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: linear-gradient(to bottom, #4b0082, #8b00ff);;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oopproject.HelloController">
+<AnchorPane prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: linear-gradient(to bottom, #4b0082, #8b00ff);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oopproject.LoginController">
     <VBox alignment="CENTER" spacing="20" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <!-- Title -->
         <Label style="-fx-text-fill: white; -fx-font-size: 36px; -fx-font-weight: bold;" text="Login Page">
@@ -35,11 +35,11 @@
             <PasswordField fx:id="passwordField" prefHeight="50.0" prefWidth="300.0" style="-fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #ffffff; -fx-border-width: 2px; -fx-font-size: 20px;" />
         </HBox>
 
-        <!-- Login Button -->
-        <Button onAction="#handleLogin" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #00c6ff; -fx-background-radius: 25; -fx-text-fill: white; -fx-font-size: 20px;" text="Login">
-         <font>
-            <Font name="Bell MT" size="9.0" />
-         </font></Button>
+        <!-- Login Buttons -->
+        <HBox alignment="CENTER" spacing="20">
+            <Button onAction="#handleUserLogin" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #00c6ff; -fx-background-radius: 25; -fx-text-fill: white; -fx-font-size: 20px;" text="User Login" />
+            <Button onAction="#handleAdminLogin" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #ff6347; -fx-background-radius: 25; -fx-text-fill: white; -fx-font-size: 20px;" text="Admin Login" />
+        </HBox>
 
         <!-- Sign-Up Link -->
         <Label prefHeight="25.0" prefWidth="233.0" style="-fx-text-fill: white; -fx-font-size: 16px;" text="Don't have an account? Sign-Up" textAlignment="CENTER" />
