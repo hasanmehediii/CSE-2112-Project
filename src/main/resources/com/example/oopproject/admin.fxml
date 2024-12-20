@@ -6,21 +6,26 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" spacing="10" style="-fx-padding: 10; -fx-background-color: linear-gradient(to bottom, #4b0082, #8b00ff);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
-    <!-- TableView for displaying movies -->
-    <TableView fx:id="movieTableView" prefHeight="300" prefWidth="600" style="-fx-background-color: linear-gradient(to bottom, #8b00ff, #4b0082);">
+<VBox alignment="CENTER" spacing="10" style="-fx-background-color: linear-gradient(to bottom, #4b0082, #8b00ff);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oopproject.AdminController">
+    <TableView fx:id="movieTable" prefHeight="400" prefWidth="800" style="-fx-background-color: linear-gradient(to bottom, #4b0082, #8b00ff);">
         <columns>
-            <TableColumn prefWidth="150" text="Movie Name" />
-            <TableColumn prefWidth="100" text="Ticket Price" />
-            <TableColumn prefWidth="250" text="Time Slots" />
-            <TableColumn prefWidth="100" text="Seats" />
+            <TableColumn fx:id="titleColumn" text="Title" />
+            <TableColumn fx:id="priceColumn" text="Price" />
+            <TableColumn fx:id="timeslot1Column" text="Timeslot 1" />
+            <TableColumn fx:id="seats1Column" prefWidth="50.00001525878906" text="Seats" />
+            <TableColumn fx:id="available1Column" prefWidth="63.33331298828125" text="Available" />
+            <TableColumn fx:id="timeslot2Column" prefWidth="83.33331298828125" text="Timeslot 2" />
+            <TableColumn fx:id="seats2Column" prefWidth="53.33331298828125" text="Seats" />
+            <TableColumn fx:id="available2Column" prefWidth="70.66665649414062" text="Available" />
+            <TableColumn fx:id="timeslot3Column" prefWidth="78.66668701171875" text="Timeslot 3" />
+            <TableColumn fx:id="seats3Column" minWidth="0.0" prefWidth="0.0" text="Seats" />
+            <TableColumn fx:id="available3Column" prefWidth="70.66665649414062" text="Available" />
         </columns>
     </TableView>
 
-    <!-- Buttons for actions -->
     <HBox alignment="CENTER" spacing="10">
-        <Button fx:id="addButton" prefWidth="120" style="-fx-background-color: #34eb77;" text="Add Movie" />
-        <Button fx:id="editButton" prefWidth="120" style="-fx-background-color: yellow;" text="Edit Movie" />
-        <Button fx:id="removeButton" prefWidth="120" style="-fx-background-color: red;" text="Remove Movie" />
+        <Button onAction="#onAddMovie" style="-fx-background-color: yellow;" text="Add Movie" />
+        <Button onAction="#onDeleteMovie" style="-fx-background-color: red;" text="Delete Movie" />
+        <Button onAction="#onSaveChanges" style="-fx-background-color: #34eb77;" text="Save Changes" />
     </HBox>
 </VBox>
