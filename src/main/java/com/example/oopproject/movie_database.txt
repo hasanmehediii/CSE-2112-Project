@@ -1,0 +1,10 @@
+Inception|10.5|10:00 AM+50, 1:00 PM+40, 3:00 PM+30
+Avengers: Endgame|12.0|11:00 AM+60, 2:00 PM+50, 6:00 PM+70
+The Dark Knight|11.5|9:30 AM+40, 12:30 PM+35, 8:00 PM+45
+Interstellar|13.0|10:15 AM+50, 1:15 PM+40, 4:15 PM+30
+Parasite|9.0|11:45 AM+25, 3:00 PM+30, 7:00 PM+20
+Joker|10.0|12:00 PM+55, 4:00 PM+45, 8:30 PM+40
+Titanic|8.5|9:00 AM+60, 2:30 PM+50, 6:30 PM+40
+The Godfather|15.0|1:00 PM+35, 5:00 PM+30, 9:00 PM+25
+Shutter Island|10.5|10:30 AM+50, 3:30 PM+45, 7:30 PM+40
+The Matrix|12.0|12:15 PM+65, 4:15 PM+55, 8:15 PM+50

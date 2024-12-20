@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="10" style="-fx-padding: 10; -fx-background-color: linear-gradient(to bottom, #4b0082, #8b00ff);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <!-- TableView for displaying movies -->
+    <TableView fx:id="movieTableView" prefHeight="300" prefWidth="600" style="-fx-background-color: linear-gradient(to bottom, #8b00ff, #4b0082);">
+        <columns>
+            <TableColumn prefWidth="150" text="Movie Name" />
+            <TableColumn prefWidth="100" text="Ticket Price" />
+            <TableColumn prefWidth="250" text="Time Slots" />
+            <TableColumn prefWidth="100" text="Seats" />
+        </columns>
+    </TableView>
+
+    <!-- Buttons for actions -->
+    <HBox alignment="CENTER" spacing="10">
+        <Button fx:id="addButton" prefWidth="120" style="-fx-background-color: #34eb77;" text="Add Movie" />
+        <Button fx:id="editButton" prefWidth="120" style="-fx-background-color: yellow;" text="Edit Movie" />
+        <Button fx:id="removeButton" prefWidth="120" style="-fx-background-color: red;" text="Remove Movie" />
+    </HBox>
+</VBox>
