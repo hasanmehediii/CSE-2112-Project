@@ -12,7 +12,7 @@
     <TableView fx:id="movieTable" prefHeight="400" prefWidth="800" style="-fx-background-color: linear-gradient(to bottom, #4b0082, #8b00ff);">
         <columns>
             <TableColumn fx:id="titleColumn" text="Title" />
-            <TableColumn fx:id="priceColumn" text="Price" />
+            <TableColumn fx:id="priceColumn" text="Price($)" />
             <TableColumn fx:id="timeslot1Column" text="Timeslot 1" />
             <TableColumn fx:id="seats1Column" prefWidth="50.00001525878906" text="Seats" />
             <TableColumn fx:id="available1Column" prefWidth="63.33331298828125" text="Available" />
