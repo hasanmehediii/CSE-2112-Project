@@ -82,18 +82,18 @@ public class LoginController {
 
     private void openAdminDashboard() {
         System.out.println("Admin Dashboard Opened");
-        /*try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/oopproject/admin_dashboard.fxml"));
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/oopproject/admin.fxml"));
             Parent root = loader.load();
 
             Stage currentStage = (Stage) usernameField.getScene().getWindow();
-            Scene adminDashboardScene = new Scene(root);
+            Scene adminDashboardScene = new Scene(root, 720, 600);
             currentStage.setScene(adminDashboardScene);
             currentStage.sizeToScene();
             currentStage.show();
         } catch (IOException e) {
             errorLabel.setText("Error: Unable to load Admin Dashboard.");
-        }*/
+        }
     }
 
     @FXML

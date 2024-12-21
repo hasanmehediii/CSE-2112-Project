@@ -9,6 +9,8 @@ import javafx.scene.control.cell.TextFieldTableCell;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
+import javafx.util.converter.IntegerStringConverter;
+
 
 public class AdminController {
 
@@ -76,14 +78,44 @@ public class AdminController {
 
         // Allow editing the table cells
         movieTable.setEditable(true);
+        setupEditableColumns();
+    }
+
+    private void setupEditableColumns() {
+        // String-based columns
         titleColumn.setCellFactory(TextFieldTableCell.forTableColumn());
+        titleColumn.setOnEditCommit(event -> event.getRowValue().setTitle(event.getNewValue()));
+
         priceColumn.setCellFactory(TextFieldTableCell.forTableColumn());
+        priceColumn.setOnEditCommit(event -> event.getRowValue().setPrice(event.getNewValue()));
+
         timeslot1Column.setCellFactory(TextFieldTableCell.forTableColumn());
+        timeslot1Column.setOnEditCommit(event -> event.getRowValue().setTimeslot1(event.getNewValue()));
+
         timeslot2Column.setCellFactory(TextFieldTableCell.forTableColumn());
+        timeslot2Column.setOnEditCommit(event -> event.getRowValue().setTimeslot2(event.getNewValue()));
+
         timeslot3Column.setCellFactory(TextFieldTableCell.forTableColumn());
+        timeslot3Column.setOnEditCommit(event -> event.getRowValue().setTimeslot3(event.getNewValue()));
+
         available1Column.setCellFactory(TextFieldTableCell.forTableColumn());
+        available1Column.setOnEditCommit(event -> event.getRowValue().setAvailable1(event.getNewValue()));
+
         available2Column.setCellFactory(TextFieldTableCell.forTableColumn());
+        available2Column.setOnEditCommit(event -> event.getRowValue().setAvailable2(event.getNewValue()));
+
         available3Column.setCellFactory(TextFieldTableCell.forTableColumn());
+        available3Column.setOnEditCommit(event -> event.getRowValue().setAvailable3(event.getNewValue()));
+
+        // Integer-based columns
+        seats1Column.setCellFactory(TextFieldTableCell.forTableColumn(new IntegerStringConverter()));
+        seats1Column.setOnEditCommit(event -> event.getRowValue().setSeats1(event.getNewValue()));
+
+        seats2Column.setCellFactory(TextFieldTableCell.forTableColumn(new IntegerStringConverter()));
+        seats2Column.setOnEditCommit(event -> event.getRowValue().setSeats2(event.getNewValue()));
+
+        seats3Column.setCellFactory(TextFieldTableCell.forTableColumn(new IntegerStringConverter()));
+        seats3Column.setOnEditCommit(event -> event.getRowValue().setSeats3(event.getNewValue()));
     }
 
     @FXML
@@ -108,7 +140,7 @@ public class AdminController {
     @FXML
     private void onSaveChanges() {
         // Save the movie data back to the file
-        saveMoviesToFile(movieList);
+        saveMoviesToFile(new ArrayList<>(movieList)); // Convert ObservableList to List
         showAlert("Success", "Changes saved to the file.");
     }
 
@@ -120,20 +152,15 @@ public class AdminController {
                 line = line.trim();
                 if (!line.isEmpty()) {
                     String[] parts = line.split("\\|");
-
-                    // Ensure the data has the correct number of parts (11 fields for Title, Price, 3 timeslots with seats and availability)
                     if (parts.length == 11) {
                         String title = parts[0].trim();
                         String price = parts[1].trim();
-                        // Timeslot 1, Seats 1, Available 1
                         String timeslot1 = parts[2].trim();
                         int seats1 = Integer.parseInt(parts[3].trim());
                         String available1 = parts[4].trim();
-                        // Timeslot 2, Seats 2, Available 2
                         String timeslot2 = parts[5].trim();
                         int seats2 = Integer.parseInt(parts[6].trim());
                         String available2 = parts[7].trim();
-                        // Timeslot 3, Seats 3, Available 3
                         String timeslot3 = parts[8].trim();
                         int seats3 = Integer.parseInt(parts[9].trim());
                         String available3 = parts[10].trim();
