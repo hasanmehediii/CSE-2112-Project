@@ -6,9 +6,33 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
 <VBox alignment="CENTER" spacing="10" style="-fx-background-color: linear-gradient(to bottom, #4b0082, #8b00ff);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oopproject.AdminController">
+   <Label text="Change Movie details from this table" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS">
+      <font>
+         <Font name="System Bold" size="26.0" />
+      </font>
+      <textFill>
+         <LinearGradient>
+            <stops>
+               <Stop>
+                  <color>
+                     <Color red="0.4754602611064911" green="0.4912280738353729" blue="0.17587177455425262" />
+                  </color>
+               </Stop>
+               <Stop offset="1.0">
+                  <color>
+                     <Color red="1.0" green="1.0" blue="1.0" />
+                  </color>
+               </Stop>
+            </stops>
+         </LinearGradient>
+      </textFill>
+   </Label>
     <TableView fx:id="movieTable" prefHeight="400" prefWidth="800" style="-fx-background-color: linear-gradient(to bottom, #4b0082, #8b00ff);">
         <columns>
             <TableColumn fx:id="titleColumn" text="Title" />

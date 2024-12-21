@@ -89,6 +89,7 @@ public class LoginController {
             Stage currentStage = (Stage) usernameField.getScene().getWindow();
             Scene adminDashboardScene = new Scene(root, 720, 600);
             currentStage.setScene(adminDashboardScene);
+            currentStage.setTitle("Admin Window");
             currentStage.sizeToScene();
             currentStage.show();
         } catch (IOException e) {
