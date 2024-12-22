@@ -22,7 +22,7 @@
                 <Font name="Arial Bold" size="36.0" />
             </font>
          <textFill>
-            <LinearGradient endY="1.0">
+            <LinearGradient>
                <stops>
                   <Stop>
                      <color>

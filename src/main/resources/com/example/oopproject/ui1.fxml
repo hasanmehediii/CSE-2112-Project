@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0"
+            style="-fx-background-color: linear-gradient(to bottom, #4b0082, #8b00ff);"
+            xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.oopproject.UI1Controller">
+    <VBox layoutY="60.0" prefHeight="276.0" prefWidth="600.0"
+          style="-fx-background-color: linear-gradient(to bottom, #4b0082, #8b00ff);">
+        <HBox prefHeight="100.0" prefWidth="200.0">
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true"/>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true"/>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true"/>
+        </HBox>
+        <HBox prefHeight="100.0" prefWidth="200.0">
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true"/>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true"/>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true"/>
+        </HBox>
+    </VBox>
+    <Label layoutX="64.0" layoutY="14.0" text="Select Your Movies available from here" textAlignment="CENTER">
+        <font>
+          <Font name="System Bold" size="27.0"/>
+        </font>
+        <textFill>
+          <LinearGradient endX="1.0" endY="1.0" startX="0.06012658152399184">
+              <stops>
+                  <Stop>
+                      <color>
+                          <Color red="0.4753645956516266" green="0.9035087823867798" blue="0.35694172978401184"/>
+                      </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                      <color>
+                          <Color red="1.0" green="1.0" blue="1.0"/>
+                      </color>
+                  </Stop>
+              </stops>
+          </LinearGradient>
+        </textFill>
+    </Label>
+</AnchorPane>
