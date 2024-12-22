@@ -8,3 +8,4 @@ mamam|mama|mam|ma|2024-12-03|0.0|None
 valverde|madrid|Fede|Valverde|2024-12-02|0.0|None
 kross|tk8|Toni|Kross|2024-12-06|0.0|None
 luka|lm10|Luka|Modric|2024-11-22|0.0|None
+jarin|jarinafra|jarin|afra|2024-12-22|0.0|None
