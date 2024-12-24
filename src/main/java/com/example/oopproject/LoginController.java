@@ -66,18 +66,18 @@ public class LoginController {
 
     private void openMainMenuWindow() {
         System.out.println("Main Menu Opened");
-        /*try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/oopproject/main_menu.fxml"));
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/oopproject/ui1.fxml"));
             Parent root = loader.load();
 
             Stage currentStage = (Stage) usernameField.getScene().getWindow();
-            Scene mainMenuScene = new Scene(root);
+            Scene mainMenuScene = new Scene(root, 720, 600);
             currentStage.setScene(mainMenuScene);
             currentStage.sizeToScene();
             currentStage.show();
         } catch (IOException e) {
             errorLabel.setText("Error: Unable to load Main Menu window.");
-        }*/
+        }
     }
 
     private void openAdminDashboard() {
