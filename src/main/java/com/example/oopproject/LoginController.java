@@ -65,7 +65,6 @@ public class LoginController {
     }
 
     private void openMainMenuWindow() {
-        System.out.println("Main Menu Opened");
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/oopproject/ui1.fxml"));
             Parent root = loader.load();
