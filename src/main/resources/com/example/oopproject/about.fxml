@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: linear-gradient(to bottom, #4b0082, #8b00ff);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oopproject.AboutController">
+   <VBox alignment="TOP_CENTER" prefHeight="400.0" prefWidth="600.0" spacing="15.0" style="-fx-padding: 20;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Label alignment="CENTER" prefHeight="75.0" prefWidth="600.0" text="Developers of this Application">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+         <textFill>
+            <LinearGradient>
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="0.883474588394165" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color green="1.0" blue="0.36666667461395264" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <HBox alignment="CENTER" prefHeight="117.0" prefWidth="600.0" spacing="10.0">
+         <ImageView fitHeight="147.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@dev1.png" />
+         </ImageView>
+         <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@dev2.png" />
+         </ImageView>
+      </HBox>
+      <HBox alignment="TOP_CENTER" prefHeight="61.0" prefWidth="600.0" spacing="20.0">
+         <Label alignment="CENTER" prefHeight="35.0" prefWidth="208.0" text="Developer1">
+            <font>
+               <Font size="22.0" />
+            </font>
+         </Label>
+         <Label alignment="CENTER" prefHeight="35.0" prefWidth="208.0" text="Developer2">
+            <font>
+               <Font size="22.0" />
+            </font>
+         </Label>
+      </HBox>
+      <VBox alignment="CENTER" prefWidth="600.0" spacing="10.0">
+         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="-> A Basic Movie Ticket Booking Application with Core Java Programming Language Concepts to handle logics and JavaFX Library for creating Graphical User Interfaces. Admin user can add or remove movies from database. A user can login or signup for account and then can book ticket for available movie and their seat and time slots" wrappingWidth="500.0">
+            <font>
+               <Font size="16.0" />
+            </font>
+         </Text>
+      </VBox>
+   </VBox>
+</AnchorPane>

@@ -31,6 +31,24 @@ public class StartController {
     }
 
     @FXML
+    private void aboutUs() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/oopproject/about.fxml"));
+            Parent root = loader.load();
+
+            Stage aboutStage = new Stage();
+            aboutStage.setTitle("About Us");
+            Scene aboutScene = new Scene(root, 720, 600);
+            aboutStage.setScene(aboutScene);
+            aboutStage.show();
+        } catch (IOException e) {
+            System.err.println("Error: Unable to load About Us window.");
+            //e.printStackTrace(); // Keep this for debugging
+        }
+    }
+
+
+    @FXML
     private void exit() {
         System.out.println("Exit button clicked!");
         System.exit(0);
