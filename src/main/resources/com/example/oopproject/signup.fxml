@@ -14,7 +14,7 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="621.0" prefWidth="700.0" style="-fx-background-color: linear-gradient(to bottom, #4b0082, #8b00ff);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oopproject.SignupController">
+<AnchorPane prefHeight="621.0" prefWidth="700.0" style="-fx-background-color: linear-gradient(to bottom, #000080, #4682b4);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oopproject.SignupController">
 
     <!-- Back Button -->
     <Button onAction="#handleBack" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #ff6347; -fx-background-radius: 15; -fx-text-fill: white; -fx-font-size: 14px;" text="Back" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />

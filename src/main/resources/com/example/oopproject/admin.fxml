@@ -11,22 +11,22 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" spacing="10" style="-fx-background-color: linear-gradient(to bottom, #4b0082, #8b00ff);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oopproject.AdminController">
+<VBox alignment="CENTER" spacing="10" style="-fx-background-color: linear-gradient(to bottom, #000080, #4682b4);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oopproject.AdminController">
    <Label text="Change Movie details from this table" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS">
       <font>
          <Font name="System Bold" size="26.0" />
       </font>
       <textFill>
-         <LinearGradient>
+         <LinearGradient endX="0.55379743213895" endY="1.0">
             <stops>
                <Stop>
                   <color>
-                     <Color red="0.4754602611064911" green="0.4912280738353729" blue="0.17587177455425262" />
+                     <Color green="1.0" blue="0.3093220293521881" />
                   </color>
                </Stop>
                <Stop offset="1.0">
                   <color>
-                     <Color red="1.0" green="1.0" blue="1.0" />
+                     <Color red="1.0" green="0.7663841843605042" />
                   </color>
                </Stop>
             </stops>
