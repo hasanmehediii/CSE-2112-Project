@@ -1,8 +1,8 @@
-kaka|5555|Kak|ku|2022-12-10|0.0|No transactions yet
-nana|3333|Nan|nu|2024-11-10|0.0|No transactions yet
-mehedi|9999|Mehedi|Hasan|2024-12-10|0.0|No transactions yet
-lm10|goat|Leo|Messi|2003-03-08|0.0|No transactions yet
-cr7|sui|Ronaldo|CR7|2025-01-11|0.0|No transactions yet
+kaka|5555|Kak|ku|2022-12-10|0.0|None
+nana|3333|Nan|nu|2024-11-10|0.0|None
+mehedi|9999|Mehedi|Hasan|2024-12-10|0.0|None
+lm10|goat|Leo|Messi|2003-03-08|0.0|None
+cr7|sui|Ronaldo|CR7|2025-01-11|0.0|None
 mama|mama|Mr|MaMa|2024-12-05|0.0|None
 mamam|mama|mam|ma|2024-12-03|0.0|None
 valverde|madrid|Fede|Valverde|2024-12-02|0.0|None
