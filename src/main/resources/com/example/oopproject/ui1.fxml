@@ -47,10 +47,26 @@
             </font>
          </Button>
       </HBox>
-      <Label fx:id="movieLabel" alignment="CENTER" style="-fx-background-color: rgba(0, 0, 0, 0.5); -fx-text-fill: #5ebcff;" textFill="#5ebcff">
+      <Label fx:id="movieLabel" alignment="CENTER" style="-fx-background-color: rgba(0, 0, 0, 0.5); -fx-text-fill: #5ebcff;">
          <font>
-            <Font name="System Bold" size="25.0" />
+            <Font name="System Bold" size="30.0" />
          </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.253164555453047" startY="0.36708858345128315">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.009259259328246117" green="0.7192901372909546" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color green="1.0" blue="0.2666666805744171" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
       </Label>
    </VBox>
 </StackPane>

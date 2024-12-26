@@ -17,7 +17,7 @@
          <Font name="System Bold" size="26.0" />
       </font>
       <textFill>
-         <LinearGradient endX="0.55379743213895" endY="1.0">
+         <LinearGradient endX="0.55379743213895">
             <stops>
                <Stop>
                   <color>
@@ -44,7 +44,7 @@
             <TableColumn fx:id="seats2Column" prefWidth="53.33331298828125" text="Seats" />
             <TableColumn fx:id="available2Column" prefWidth="70.66665649414062" text="Available" />
             <TableColumn fx:id="timeslot3Column" prefWidth="78.66668701171875" text="Timeslot 3" />
-            <TableColumn fx:id="seats3Column" minWidth="0.0" prefWidth="0.0" text="Seats" />
+            <TableColumn fx:id="seats3Column" prefWidth="53.33331298828125" text="Seats" />
             <TableColumn fx:id="available3Column" prefWidth="70.66665649414062" text="Available" />
         </columns>
     </TableView>
