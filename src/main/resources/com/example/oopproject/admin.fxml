@@ -33,7 +33,7 @@
          </LinearGradient>
       </textFill>
    </Label>
-    <TableView fx:id="movieTable" prefHeight="400" prefWidth="800" style="-fx-background-color: linear-gradient(to bottom, #4b0082, #8b00ff);">
+    <TableView fx:id="movieTable" prefHeight="400" prefWidth="800" style="-fx-background-color: linear-gradient(to bottom, #000080, #4682b4);">
         <columns>
             <TableColumn fx:id="titleColumn" text="Title" />
             <TableColumn fx:id="priceColumn" text="Price($)" />
@@ -50,13 +50,38 @@
     </TableView>
 
     <HBox alignment="CENTER" spacing="10">
-        <Button onAction="#onAddMovie" style="-fx-background-color: yellow;" text="Add Movie" />
-        <Button onAction="#onDeleteMovie" style="-fx-background-color: red;" text="Delete Movie" />
-        <Button onAction="#onSaveChanges" style="-fx-background-color: #34eb77;" text="Save Changes" />
+        <Button onAction="#onAddMovie" style="-fx-background-color: yellow;" text="Add Movie">
+         <font>
+            <Font name="System Bold" size="12.666666984558105" />
+         </font></Button>
+        <Button onAction="#onDeleteMovie" style="-fx-background-color: red;" text="Delete Movie">
+         <font>
+            <Font name="Calibri Bold" size="13.0" />
+         </font></Button>
+        <Button onAction="#onSaveChanges" style="-fx-background-color: #34eb77;" text="Save Changes">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Button>
     </HBox>
    <Label text="For making any change, press enter to save">
       <font>
-         <Font name="System Bold" size="13.0" />
+         <Font name="System Bold" size="15.0" />
       </font>
+      <textFill>
+         <LinearGradient endX="0.47784813748130317" endY="1.0" startY="0.15506324285193335">
+            <stops>
+               <Stop>
+                  <color>
+                     <Color red="0.20881351828575134" green="1.0" blue="0.03999999910593033" />
+                  </color>
+               </Stop>
+               <Stop offset="1.0">
+                  <color>
+                     <Color red="0.8333333134651184" green="1.0" />
+                  </color>
+               </Stop>
+            </stops>
+         </LinearGradient>
+      </textFill>
    </Label>
 </VBox>
