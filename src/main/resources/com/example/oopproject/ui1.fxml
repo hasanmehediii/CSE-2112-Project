@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.StackPane?>
@@ -13,12 +14,12 @@
 
 <StackPane prefHeight="493.0" prefWidth="584.0" style="-fx-background-image: url('file:src/main/resources/com/example/oopproject/theater3.jpg')" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oopproject.UI1Controller">
    <VBox alignment="CENTER" spacing="20">
-      <Label alignment="CENTER" prefHeight="45.0" prefWidth="403.0" style="-fx-background-color: rgba(0, 0, 0, 0.5);" text="Select Movies from here">
+      <Label alignment="CENTER" prefHeight="45.0" prefWidth="403.0" text="Select Movies from here">
          <font>
             <Font name="System Bold" size="30.0" />
          </font>
          <textFill>
-            <LinearGradient startX="0.018987339508684375">
+            <LinearGradient startX="0.46835442509832265" startY="0.07278485841388944">
                <stops>
                   <Stop>
                      <color>
@@ -27,24 +28,30 @@
                   </Stop>
                   <Stop offset="1.0">
                      <color>
-                        <Color red="0.5628654956817627" green="0.6140350699424744" />
+                        <Color green="1.0" blue="0.5333333611488342" />
                      </color>
                   </Stop>
                </stops>
             </LinearGradient>
          </textFill>
       </Label>
-      <ImageView fx:id="thumbnailImage" fitHeight="305.0" fitWidth="469.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="thumbnailImage" fitHeight="254.0" fitWidth="443.0" pickOnBounds="true" preserveRatio="true" />
       <HBox alignment="CENTER" spacing="20">
          <Button fx:id="prevButton" onAction="#showPrevThumbnail" prefHeight="36.0" prefWidth="78.0" style="-fx-background-color: yellow;" text="&lt;&lt;">
             <font>
                <Font name="System Bold" size="15.0" />
             </font>
+            <effect>
+               <InnerShadow />
+            </effect>
          </Button>
-         <Button fx:id="nextButton" onAction="#showNextThumbnail" prefHeight="35.0" prefWidth="79.0" style="-fx-background-color: pink;" text="&gt;&gt;">
+         <Button fx:id="nextButton" onAction="#showNextThumbnail" prefHeight="35.0" prefWidth="79.0" style="-fx-background-color: #03ff99;" text="&gt;&gt;">
             <font>
                <Font name="System Bold" size="15.0" />
             </font>
+            <effect>
+               <InnerShadow />
+            </effect>
          </Button>
       </HBox>
       <Label fx:id="movieLabel" alignment="CENTER" style="-fx-background-color: rgba(0, 0, 0, 0.5); -fx-text-fill: #5ebcff;">
@@ -52,7 +59,7 @@
             <Font name="System Bold" size="30.0" />
          </font>
          <textFill>
-            <LinearGradient endX="1.0" endY="1.0" startX="0.253164555453047" startY="0.36708858345128315">
+            <LinearGradient startX="0.253164555453047" startY="0.36708858345128315">
                <stops>
                   <Stop>
                      <color>
@@ -68,5 +75,13 @@
             </LinearGradient>
          </textFill>
       </Label>
+      <Button fx:id="selectButton" onAction="#handleSelectButton" mnemonicParsing="false" prefHeight="36.0" prefWidth="76.0" style="-fx-background-color: red;" text="Select">
+         <font>
+            <Font name="Consolas Bold" size="16.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
    </VBox>
 </StackPane>

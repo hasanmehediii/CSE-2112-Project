@@ -1,10 +1,13 @@
 package com.example.oopproject;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
 
 import java.io.File;
 import java.io.IOException;
@@ -15,6 +18,7 @@ import java.util.List;
 
 public class UI1Controller {
 
+    public Button selectButton;
     @FXML
     private ImageView thumbnailImage;
 
@@ -33,22 +37,18 @@ public class UI1Controller {
 
     @FXML
     public void initialize() {
-        // Load movie data and thumbnails
         loadMovieData();
         loadThumbnails();
 
-        // Display the first thumbnail and movie name
         if (!thumbnails.isEmpty()) {
             showThumbnail(0);
         }
 
-        // Update button states initially
         updateButtonStates();
     }
 
     private void loadMovieData() {
         try {
-            // Read movie names from text file
             List<String> lines = Files.readAllLines(Paths.get("movie_database.txt"));
             for (String line : lines) {
                 String movieName = line.split("\\|")[0].trim();
@@ -60,7 +60,6 @@ public class UI1Controller {
     }
 
     private void loadThumbnails() {
-        // Load thumbnails from the "thumbnails" folder
         File thumbnailDir = new File("thumbnails");
         if (thumbnailDir.exists() && thumbnailDir.isDirectory()) {
             for (String movieName : movieNames) {
@@ -87,6 +86,24 @@ public class UI1Controller {
             currentIndex++;
             showThumbnail(currentIndex);
             updateButtonStates();
+        }
+    }
+
+    @FXML
+    private void handleSelectButton() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("UI2.fxml"));
+            Stage stage = new Stage();
+            stage.setScene(new Scene(loader.load(), 720, 600));
+            stage.setTitle("Movie Select Window");
+
+            // Pass data to the second controller
+            UI2Controller controller = loader.getController();
+            controller.setMovieData(movieNames.get(currentIndex), thumbnails.get(currentIndex));
+
+            stage.show();
+        } catch (IOException e) {
+            System.err.println("Error loading UI2.fxml: " + e.getMessage());
         }
     }
 
