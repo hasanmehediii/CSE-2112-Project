@@ -12,7 +12,7 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<StackPane prefHeight="493.0" prefWidth="584.0" style="-fx-background-image: url('file:src/main/resources/com/example/oopproject/theater3.jpg')" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oopproject.UI1Controller">
+<StackPane prefHeight="493.0" prefWidth="584.0" style="-fx-background-image: url('file:src/main/resources/com/example/oopproject/background.jpg')" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oopproject.UI1Controller">
    <VBox alignment="CENTER" spacing="20">
       <Label alignment="CENTER" prefHeight="45.0" prefWidth="403.0" text="Select Movies from here">
          <font>
