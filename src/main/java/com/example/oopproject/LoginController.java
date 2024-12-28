@@ -5,8 +5,11 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
-import java.io.*;
+import javafx.animation.FadeTransition;
+import javafx.animation.TranslateTransition;
+import javafx.util.Duration;
 import javafx.scene.Parent;
+import java.io.*;
 
 public class LoginController {
 
@@ -20,6 +23,36 @@ public class LoginController {
     private Label errorLabel;
 
     @FXML
+    private Button loginButton, adminLoginButton, signUpButton;
+
+    @FXML
+    public void initialize() {
+        // Fade in the username, password fields, and buttons
+        applyFadeInAnimation(usernameField, passwordField, loginButton, adminLoginButton, signUpButton, errorLabel);
+
+        // Apply translation (slide-in) effect for fields and buttons
+        applyTranslateAnimation(usernameField, passwordField, loginButton, adminLoginButton, signUpButton);
+    }
+
+    private void applyFadeInAnimation(javafx.scene.Node... nodes) {
+        for (javafx.scene.Node node : nodes) {
+            FadeTransition fadeTransition = new FadeTransition(Duration.millis(1000), node);
+            fadeTransition.setFromValue(0.0);
+            fadeTransition.setToValue(1.0);
+            fadeTransition.play();
+        }
+    }
+
+    private void applyTranslateAnimation(javafx.scene.Node... nodes) {
+        for (javafx.scene.Node node : nodes) {
+            TranslateTransition translateTransition = new TranslateTransition(Duration.millis(1000), node);
+            translateTransition.setFromX(-300); // Start from left outside the screen
+            translateTransition.setToX(0); // End at the original position
+            translateTransition.play();
+        }
+    }
+
+    @FXML
     public void handleUserLogin() {
         String username = usernameField.getText();
         String password = passwordField.getText();
@@ -28,6 +61,7 @@ public class LoginController {
             openMainMenuWindow();
         } else {
             errorLabel.setText("Invalid username or password!");
+            fadeErrorLabel(); // Fade in the error message
         }
     }
 
@@ -40,7 +74,16 @@ public class LoginController {
             openAdminDashboard();
         } else {
             errorLabel.setText("Wrong Admin Username/Password");
+            fadeErrorLabel(); // Fade in the error message
         }
+    }
+
+    private void fadeErrorLabel() {
+        // Apply fade transition for error label
+        FadeTransition fadeError = new FadeTransition(Duration.millis(500), errorLabel);
+        fadeError.setFromValue(0.0);
+        fadeError.setToValue(1.0);
+        fadeError.play();
     }
 
     private boolean checkCredentials(String username, String password) {
