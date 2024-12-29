@@ -108,24 +108,56 @@ public class UI2Controller {
             int availableSeats = Integer.parseInt(selectedSlot.getAvailableSeats().split(" ")[0]);
 
             if (ticketsToBook <= availableSeats) {
-                // Confirm booking
-                int updatedSeats = availableSeats - ticketsToBook;
+                // Show confirmation dialog
+                Alert confirmationDialog = new Alert(Alert.AlertType.CONFIRMATION);
+                confirmationDialog.setTitle("Payment Warning");
+                confirmationDialog.setHeaderText("Important Notice");
+                confirmationDialog.setContentText(
+                        "If you don't pay within 24 hours, you will lose access to the booked tickets.\n\nDo you want to confirm the booking?"
+                );
 
-                selectedSlot.setAvailableSeats(updatedSeats + " available");
+                ButtonType yesButton = new ButtonType("Yes", ButtonBar.ButtonData.OK_DONE);
+                ButtonType noButton = new ButtonType("No", ButtonBar.ButtonData.CANCEL_CLOSE);
+                confirmationDialog.getButtonTypes().setAll(yesButton, noButton);
 
-                timeSlotsTable.refresh();
+                // Wait for user action
+                confirmationDialog.showAndWait().ifPresent(response -> {
+                    if (response == yesButton) {
+                        int updatedSeats = availableSeats - ticketsToBook;
 
-                // Optional: Update database file to persist changes
-                updateDatabase(selectedSlot);
+                        selectedSlot.setAvailableSeats(updatedSeats + " available");
+                        timeSlotsTable.refresh();
 
-                System.out.println("Booking successful! " + ticketsToBook + " tickets booked. Seats remaining: " + updatedSeats);
+                        // Optional: Update database file to persist changes
+                        updateDatabase(selectedSlot);
+
+                        Alert successDialog = new Alert(Alert.AlertType.INFORMATION);
+                        successDialog.setTitle("Booking Confirmed");
+                        successDialog.setHeaderText(null);
+                        successDialog.setContentText(
+                                "Booking successful!\n" + ticketsToBook + " tickets booked.\nSeats remaining: " + updatedSeats
+                        );
+                        successDialog.showAndWait();
+                    } else {
+                        System.out.println("Booking cancelled.");
+                    }
+                });
             } else {
-                System.out.println("Not enough seats available. Seats remaining: " + availableSeats);
+                Alert warningDialog = new Alert(Alert.AlertType.WARNING);
+                warningDialog.setTitle("Insufficient Seats");
+                warningDialog.setHeaderText(null);
+                warningDialog.setContentText("Not enough seats available. Seats remaining: " + availableSeats);
+                warningDialog.showAndWait();
             }
         } else {
-            System.out.println("Please select a time slot to book tickets.");
+            Alert errorDialog = new Alert(Alert.AlertType.ERROR);
+            errorDialog.setTitle("No Time Slot Selected");
+            errorDialog.setHeaderText(null);
+            errorDialog.setContentText("Please select a time slot to book tickets.");
+            errorDialog.showAndWait();
         }
     }
+
 
     private void updateDatabase(TimeSlot updatedSlot) {
         try {
