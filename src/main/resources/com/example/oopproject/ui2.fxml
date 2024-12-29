@@ -9,10 +9,8 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.paint.LinearGradient?>
-<?import javafx.scene.paint.Stop?>
 
-<VBox alignment="CENTER" spacing="20" style="-fx-background-color: linear-gradient(to bottom, #141E30, #243B55); -fx-padding: 20;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oopproject.UI2Controller">
+<VBox alignment="CENTER" spacing="20" style="-fx-background-color: linear-gradient(to bottom, #000428, #004e92); -fx-padding: 20;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oopproject.UI2Controller">
 
     <!-- Movie Title -->
     <Label fx:id="movieLabel" style="-fx-font-size: 30; -fx-font-weight: bold; -fx-background-color: rgba(0, 0, 0, 0.7); -fx-padding: 15; -fx-background-radius: 10; -fx-text-fill: linear-gradient(to right, #FFD700, #FF4500);" text="Movie Name">
@@ -42,17 +40,17 @@
 
     <!-- Buttons for Navigation and Booking -->
     <HBox alignment="CENTER" spacing="30">
-        <Button fx:id="backButton" onAction="#handleBack" style="-fx-background-color: linear-gradient(to right, #FF7E5F, #FD297B); -fx-text-fill: white; -fx-font-size: 16; -fx-font-weight: bold; -fx-padding: 10; -fx-background-radius: 10;">
-            <text>Back</text>
+        <Button fx:id="backButton" onAction="#handleBack" prefHeight="45.0" prefWidth="115.0" style="-fx-background-color: linear-gradient(to right, #FF7E5F, #FD297B); -fx-text-fill: white; -fx-font-size: 16; -fx-font-weight: bold; -fx-padding: 10; -fx-background-radius: 10;">
             <effect>
                 <DropShadow color="#000000" radius="8.0" />
             </effect>
+            Back
         </Button>
         <Button fx:id="bookTicketButton" onAction="#handleBooking" style="-fx-background-color: linear-gradient(to right, #56AB2F, #A8E063); -fx-text-fill: white; -fx-font-size: 16; -fx-font-weight: bold; -fx-padding: 10; -fx-background-radius: 10;">
-            <text>Book Tickets</text>
             <effect>
                 <DropShadow color="#000000" radius="8.0" />
             </effect>
+            Book Tickets
         </Button>
     </HBox>
 </VBox>
