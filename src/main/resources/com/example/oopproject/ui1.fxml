@@ -2,86 +2,70 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.paint.Color?>
 <?import javafx.scene.paint.LinearGradient?>
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<StackPane prefHeight="493.0" prefWidth="584.0" style="-fx-background-image: url('file:src/main/resources/com/example/oopproject/background.jpg')" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oopproject.UI1Controller">
-   <VBox alignment="CENTER" spacing="20">
-      <Label alignment="CENTER" prefHeight="45.0" prefWidth="403.0" text="Select Movies from here">
+<StackPane prefHeight="493.0" prefWidth="584.0" style="-fx-background-image: url('file:src/main/resources/com/example/oopproject/background.jpg'); -fx-background-size: cover;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oopproject.UI1Controller">
+   <VBox alignment="CENTER" spacing="25" style="-fx-padding: 20;">
+      <Label alignment="CENTER" prefHeight="45.0" prefWidth="450.0" style="-fx-background-color: rgba(0,0,0,0.7); -fx-background-radius: 15;" text="Select Movies from here">
          <font>
-            <Font name="System Bold" size="30.0" />
+            <Font name="Arial Black" size="32.0" />
          </font>
          <textFill>
-            <LinearGradient startX="0.46835442509832265" startY="0.07278485841388944">
+            <LinearGradient endX="1.0" endY="1.0" startX="0.0" startY="0.0">
                <stops>
-                  <Stop>
-                     <color>
-                        <Color red="0.9275544285774231" green="0.9736841917037964" blue="0.0510883703827858" />
-                     </color>
-                  </Stop>
-                  <Stop offset="1.0">
-                     <color>
-                        <Color green="1.0" blue="0.5333333611488342" />
-                     </color>
-                  </Stop>
+                  <Stop color="#ff8c00" offset="0.0" />
+                  <Stop color="#ffd700" offset="1.0" />
                </stops>
             </LinearGradient>
          </textFill>
+         <effect>
+            <DropShadow color="black" radius="5" />
+         </effect>
       </Label>
-      <ImageView fx:id="thumbnailImage" fitHeight="254.0" fitWidth="443.0" pickOnBounds="true" preserveRatio="true" />
-      <HBox alignment="CENTER" spacing="20">
-         <Button fx:id="prevButton" onAction="#showPrevThumbnail" prefHeight="36.0" prefWidth="78.0" style="-fx-background-color: yellow;" text="&lt;&lt;">
+      <ImageView fx:id="thumbnailImage" fitHeight="254.0" fitWidth="443.0" pickOnBounds="true" preserveRatio="true" style="-fx-border-color: #5ebcff; -fx-border-radius: 10; -fx-border-width: 3;">
+         <effect>
+            <DropShadow color="#5ebcff" radius="10" />
+         </effect>
+      </ImageView>
+      <HBox alignment="CENTER" spacing="25">
+         <Button fx:id="prevButton" onAction="#showPrevThumbnail" prefHeight="40.0" prefWidth="80.0" style="-fx-background-color: linear-gradient(#ff6f61, #ff4757); -fx-text-fill: white; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-width: 2; -fx-border-color: #d63031;" text="Prev">
             <font>
-               <Font name="System Bold" size="15.0" />
+               <Font name="System Bold" size="16.0" />
             </font>
-            <effect>
-               <InnerShadow />
-            </effect>
          </Button>
-         <Button fx:id="nextButton" onAction="#showNextThumbnail" prefHeight="35.0" prefWidth="79.0" style="-fx-background-color: #03ff99;" text="&gt;&gt;">
+         <Button fx:id="nextButton" onAction="#showNextThumbnail" prefHeight="40.0" prefWidth="80.0" style="-fx-background-color: linear-gradient(#1dd1a1, #10ac84); -fx-text-fill: white; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-width: 2; -fx-border-color: #1dd1a1;" text="Next">
             <font>
-               <Font name="System Bold" size="15.0" />
+               <Font name="System Bold" size="16.0" />
             </font>
-            <effect>
-               <InnerShadow />
-            </effect>
          </Button>
       </HBox>
-      <Label fx:id="movieLabel" alignment="CENTER" style="-fx-background-color: rgba(0, 0, 0, 0.5); -fx-text-fill: #5ebcff;">
+      <Label fx:id="movieLabel" alignment="CENTER" style="-fx-background-color: rgba(0,0,0,0.6); -fx-background-radius: 15; -fx-padding: 10;" text="Movie Name">
          <font>
-            <Font name="System Bold" size="30.0" />
+            <Font name="Verdana Bold" size="28.0" />
          </font>
          <textFill>
-            <LinearGradient startX="0.253164555453047" startY="0.36708858345128315">
+            <LinearGradient endX="1.0" endY="1.0" startX="0.0" startY="0.0">
                <stops>
-                  <Stop>
-                     <color>
-                        <Color red="0.009259259328246117" green="0.7192901372909546" blue="1.0" />
-                     </color>
-                  </Stop>
-                  <Stop offset="1.0">
-                     <color>
-                        <Color green="1.0" blue="0.2666666805744171" />
-                     </color>
-                  </Stop>
+                  <Stop color="#48dbfb" offset="0.0" />
+                  <Stop color="#00cec9" offset="1.0" />
                </stops>
             </LinearGradient>
          </textFill>
-      </Label>
-      <Button fx:id="selectButton" onAction="#handleSelectButton" mnemonicParsing="false" prefHeight="36.0" prefWidth="76.0" style="-fx-background-color: red;" text="Select">
-         <font>
-            <Font name="Consolas Bold" size="16.0" />
-         </font>
          <effect>
-            <InnerShadow />
+            <DropShadow color="#48dbfb" radius="8" />
          </effect>
+      </Label>
+      <Button fx:id="selectButton" mnemonicParsing="false" onAction="#handleSelectButton" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: linear-gradient(#ff3838, #ff4d4d); -fx-text-fill: white; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: #ff6b6b; -fx-border-width: 2;" text="Select">
+         <font>
+            <Font name="Consolas Bold" size="18.0" />
+         </font>
       </Button>
    </VBox>
 </StackPane>

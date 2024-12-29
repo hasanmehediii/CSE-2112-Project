@@ -4,59 +4,57 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.paint.Color?>
 <?import javafx.scene.paint.LinearGradient?>
 <?import javafx.scene.paint.Stop?>
-<?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" spacing="15" style="-fx-background-color: linear-gradient(to bottom, #000080, #4682b4);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oopproject.UI2Controller">
-    <Label fx:id="movieLabel" style="-fx-font-size: 24; -fx-font-weight: bold;" text="Movie Name">
-      <textFill>
-         <LinearGradient>
-            <stops>
-               <Stop>
-                  <color>
-                     <Color red="1.0" blue="0.7666666507720947" />
-                  </color>
-               </Stop>
-               <Stop offset="1.0">
-                  <color>
-                     <Color red="0.949999988079071" green="1.0" />
-                  </color>
-               </Stop>
-            </stops>
-         </LinearGradient>
-      </textFill></Label>
-    <ImageView fx:id="thumbnailImageView" fitHeight="145.0" fitWidth="148.0" />
-    <TableView fx:id="timeSlotsTable" prefHeight="277.0" prefWidth="500">
+<VBox alignment="CENTER" spacing="20" style="-fx-background-color: linear-gradient(to bottom, #000428, #004e92);; -fx-padding: 20;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oopproject.UI2Controller">
+    <!-- Movie Label -->
+    <Label fx:id="movieLabel" style="-fx-font-size: 28; -fx-font-weight: bold; -fx-background-color: rgba(0,0,0,0.5); -fx-padding: 10; -fx-background-radius: 15;" text="Movie Name">
+        <textFill>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.0" startY="0.0">
+                <stops>
+                    <Stop color="#FF4500" offset="0.0" />
+                    <Stop color="#FFD700" offset="1.0" />
+                </stops>
+            </LinearGradient>
+        </textFill>
+        <effect>
+            <DropShadow color="#000000" radius="8.0" />
+        </effect>
+    </Label>
+
+    <!-- Thumbnail Image -->
+    <ImageView fx:id="thumbnailImageView" fitHeight="160.0" fitWidth="160.0" style="-fx-effect: dropshadow(gaussian, #4682B4, 15, 0.8, 0, 0); -fx-border-color: white; -fx-border-radius: 10; -fx-border-width: 3;" />
+
+    <!-- Time Slots Table -->
+    <TableView fx:id="timeSlotsTable" prefHeight="250.0" prefWidth="500.0" style="-fx-border-color: transparent; -fx-background-radius: 10; -fx-padding: 5;">
         <columns>
-            <TableColumn fx:id="timeSlotColumn" prefWidth="138.66665649414062" text="Time Slot" />
-            <TableColumn fx:id="totalSeatsColumn" prefWidth="154.6666259765625" text="Total Seats" />
-            <TableColumn fx:id="availableSeatsColumn" prefWidth="206.00006103515625" text="Available Seats" />
+            <TableColumn fx:id="timeSlotColumn" prefWidth="160.0" text="Time Slot" />
+            <TableColumn fx:id="totalSeatsColumn" prefWidth="160.0" text="Total Seats" />
+            <TableColumn fx:id="availableSeatsColumn" prefWidth="160.0" text="Available Seats" />
         </columns>
+        <style>
+            -fx-background-color: rgba(255, 255, 255, 0.8);
+            -fx-border-radius: 15;
+            -fx-background-radius: 15;
+        </style>
     </TableView>
-   <HBox alignment="TOP_CENTER" prefHeight="49.0" prefWidth="500.0" spacing="25.0">
-      <children>
-          <Button fx:id="backButton" onAction="#handleBack" style="-fx-background-color: #ff4b3b;" text="Back">
-            <font>
-               <Font name="System Bold" size="12.666666984558105" />
-            </font>
+
+    <!-- Navigation Buttons -->
+    <HBox alignment="CENTER" spacing="30" style="-fx-padding: 10;">
+        <Button fx:id="backButton" onAction="#handleBack" style="-fx-background-color: linear-gradient(to right, #FF6347, #FF4500); -fx-text-fill: white; -fx-font-size: 14; -fx-background-radius: 10; -fx-border-radius: 10; -fx-padding: 10;" text="Back">
             <effect>
-               <InnerShadow />
+                <DropShadow color="#000000" radius="5.0" />
             </effect>
-         </Button>
-         <Button mnemonicParsing="false" style="-fx-background-color: #1aff00;" text="Next">
-            <font>
-               <Font name="System Bold" size="13.0" />
-            </font>
+        </Button>
+        <Button fx:id="nextButton" style="-fx-background-color: linear-gradient(to right, #32CD32, #00FF7F); -fx-text-fill: white; -fx-font-size: 14; -fx-background-radius: 10; -fx-border-radius: 10; -fx-padding: 10;" text="Next">
             <effect>
-               <InnerShadow />
+                <DropShadow color="#000000" radius="5.0" />
             </effect>
-         </Button>
-      </children>
-   </HBox>
+        </Button>
+    </HBox>
 </VBox>
