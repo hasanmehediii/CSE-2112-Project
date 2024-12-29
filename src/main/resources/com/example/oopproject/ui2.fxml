@@ -13,7 +13,7 @@
 <VBox alignment="CENTER" spacing="20" style="-fx-background-color: linear-gradient(to bottom, #000428, #004e92); -fx-padding: 20;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oopproject.UI2Controller">
 
     <!-- Movie Title -->
-    <Label fx:id="movieLabel" style="-fx-font-size: 30; -fx-font-weight: bold; -fx-background-color: rgba(0, 0, 0, 0.7); -fx-padding: 15; -fx-background-radius: 10; -fx-text-fill: linear-gradient(to right, #FFD700, #FF4500);" text="Movie Name">
+    <Label fx:id="movieLabel" alignment="CENTER" prefHeight="76.0" prefWidth="263.0" style="-fx-font-size: 30; -fx-font-weight: bold; -fx-background-color: rgba(0, 0, 0, 0.7); -fx-padding: 15; -fx-background-radius: 10; -fx-text-fill: linear-gradient(to right, #FFD700, #FF4500);" text="Movie Name" textAlignment="CENTER">
         <effect>
             <DropShadow color="#000000" radius="8.0" />
         </effect>

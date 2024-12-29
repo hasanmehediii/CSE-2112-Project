@@ -158,7 +158,6 @@ public class UI2Controller {
         }
     }
 
-
     private void updateDatabase(TimeSlot updatedSlot) {
         try {
             List<String> lines = Files.readAllLines(Paths.get("movie_database.txt"));
