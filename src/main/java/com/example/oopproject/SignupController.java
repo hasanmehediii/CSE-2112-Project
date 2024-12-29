@@ -39,6 +39,7 @@ public class SignupController {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/oopproject/login.fxml"));
             Parent root = loader.load();
 
+            // Get current stage and set new scene
             Stage currentStage = (Stage) usernameField.getScene().getWindow();
             Scene loginScene = new Scene(root);
             currentStage.setScene(loginScene);

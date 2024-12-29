@@ -11,77 +11,95 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" spacing="10" style="-fx-background-color: linear-gradient(to bottom, #000080, #4682b4);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oopproject.AdminController">
-   <Label text="Change Movie details from this table" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS">
-      <font>
-         <Font name="System Bold" size="26.0" />
-      </font>
-      <textFill>
-         <LinearGradient endX="0.55379743213895">
-            <stops>
-               <Stop>
-                  <color>
-                     <Color green="1.0" blue="0.3093220293521881" />
-                  </color>
-               </Stop>
-               <Stop offset="1.0">
-                  <color>
-                     <Color red="1.0" green="0.7663841843605042" />
-                  </color>
-               </Stop>
-            </stops>
-         </LinearGradient>
-      </textFill>
-   </Label>
+<VBox alignment="CENTER" spacing="20" style="-fx-background-color: linear-gradient(to bottom, #000428, #004e92);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oopproject.AdminController">
+    <Label text="Change Movie details from this table" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS">
+        <font>
+            <Font name="System Bold" size="26.0" />
+        </font>
+        <textFill>
+            <LinearGradient endX="0.55379743213895">
+                <stops>
+                    <Stop>
+                        <color>
+                            <Color green="1.0" blue="0.3093220293521881" />
+                        </color>
+                    </Stop>
+                    <Stop offset="1.0">
+                        <color>
+                            <Color red="1.0" green="0.7663841843605042" />
+                        </color>
+                    </Stop>
+                </stops>
+            </LinearGradient>
+        </textFill>
+    </Label>
     <TableView fx:id="movieTable" prefHeight="400" prefWidth="800" style="-fx-background-color: linear-gradient(to bottom, #000080, #4682b4);">
         <columns>
             <TableColumn fx:id="titleColumn" text="Title" />
             <TableColumn fx:id="priceColumn" text="Price($)" />
             <TableColumn fx:id="timeslot1Column" text="Timeslot 1" />
-            <TableColumn fx:id="seats1Column" prefWidth="50.00001525878906" text="Seats" />
-            <TableColumn fx:id="available1Column" prefWidth="63.33331298828125" text="Available" />
-            <TableColumn fx:id="timeslot2Column" prefWidth="83.33331298828125" text="Timeslot 2" />
-            <TableColumn fx:id="seats2Column" prefWidth="53.33331298828125" text="Seats" />
-            <TableColumn fx:id="available2Column" prefWidth="70.66665649414062" text="Available" />
-            <TableColumn fx:id="timeslot3Column" prefWidth="78.66668701171875" text="Timeslot 3" />
-            <TableColumn fx:id="seats3Column" prefWidth="53.33331298828125" text="Seats" />
-            <TableColumn fx:id="available3Column" prefWidth="70.66665649414062" text="Available" />
+            <TableColumn fx:id="seats1Column" prefWidth="50.0" text="Seats" />
+            <TableColumn fx:id="available1Column" prefWidth="63.0" text="Available" />
+            <TableColumn fx:id="timeslot2Column" prefWidth="83.0" text="Timeslot 2" />
+            <TableColumn fx:id="seats2Column" prefWidth="53.0" text="Seats" />
+            <TableColumn fx:id="available2Column" prefWidth="70.0" text="Available" />
+            <TableColumn fx:id="timeslot3Column" prefWidth="78.0" text="Timeslot 3" />
+            <TableColumn fx:id="seats3Column" prefWidth="53.0" text="Seats" />
+            <TableColumn fx:id="available3Column" prefWidth="70.0" text="Available" />
         </columns>
     </TableView>
 
-    <HBox alignment="CENTER" spacing="10">
-        <Button onAction="#onAddMovie" style="-fx-background-color: yellow;" text="Add Movie">
-         <font>
-            <Font name="System Bold" size="12.666666984558105" />
-         </font></Button>
-        <Button onAction="#onDeleteMovie" style="-fx-background-color: red;" text="Delete Movie">
-         <font>
-            <Font name="Calibri Bold" size="13.0" />
-         </font></Button>
-        <Button onAction="#onSaveChanges" style="-fx-background-color: #34eb77;" text="Save Changes">
-         <font>
-            <Font name="System Bold" size="13.0" />
-         </font></Button>
+    <HBox alignment="CENTER" spacing="20">
+        <!-- Add Movie Button -->
+        <Button onAction="#onAddMovie" prefHeight="50.0" prefWidth="150.0"
+                style="-fx-background-color: linear-gradient(to bottom, #FFD700, #FFA500);
+                       -fx-background-radius: 25;
+                       -fx-text-fill: black;
+                       -fx-font-size: 18px;
+                       -fx-font-weight: bold;
+                       -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 5);"
+                text="Add Movie" />
+
+        <!-- Delete Movie Button -->
+        <Button onAction="#onDeleteMovie" prefHeight="50.0" prefWidth="150.0"
+                style="-fx-background-color: linear-gradient(to bottom, #FF6347, #FF4500);
+                       -fx-background-radius: 25;
+                       -fx-text-fill: white;
+                       -fx-font-size: 18px;
+                       -fx-font-weight: bold;
+                       -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 5);"
+                text="Delete Movie" />
+
+        <!-- Save Changes Button -->
+        <Button onAction="#onSaveChanges" prefHeight="50.0" prefWidth="180.0"
+                style="-fx-background-color: linear-gradient(to bottom, #38ef7d, #11998e);
+                       -fx-background-radius: 25;
+                       -fx-text-fill: white;
+                       -fx-font-size: 18px;
+                       -fx-font-weight: bold;
+                       -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 5);"
+                text="Save Changes" />
     </HBox>
-   <Label text="For making any change, press enter to save">
-      <font>
-         <Font name="System Bold" size="15.0" />
-      </font>
-      <textFill>
-         <LinearGradient endX="0.47784813748130317" endY="1.0" startY="0.15506324285193335">
-            <stops>
-               <Stop>
-                  <color>
-                     <Color red="0.20881351828575134" green="1.0" blue="0.03999999910593033" />
-                  </color>
-               </Stop>
-               <Stop offset="1.0">
-                  <color>
-                     <Color red="0.8333333134651184" green="1.0" />
-                  </color>
-               </Stop>
-            </stops>
-         </LinearGradient>
-      </textFill>
-   </Label>
+
+    <Label text="For making any change, press enter to save">
+        <font>
+            <Font name="System Bold" size="15.0" />
+        </font>
+        <textFill>
+            <LinearGradient endX="0.47784813748130317" endY="1.0" startY="0.15506324285193335">
+                <stops>
+                    <Stop>
+                        <color>
+                            <Color red="0.20881351828575134" green="1.0" blue="0.03999999910593033" />
+                        </color>
+                    </Stop>
+                    <Stop offset="1.0">
+                        <color>
+                            <Color red="0.8333333134651184" green="1.0" />
+                        </color>
+                    </Stop>
+                </stops>
+            </LinearGradient>
+        </textFill>
+    </Label>
 </VBox>

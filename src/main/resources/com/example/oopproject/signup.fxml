@@ -17,12 +17,20 @@
 <AnchorPane prefHeight="621.0" prefWidth="700.0" style="-fx-background-color: linear-gradient(to bottom, #000428, #004e92);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oopproject.SignupController">
 
     <!-- Back Button -->
-    <Button onAction="#handleBack" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #ff6347; -fx-background-radius: 15; -fx-text-fill: white; -fx-font-size: 14px;" text="Back" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+    <Button onAction="#handleBack" prefHeight="40.0" prefWidth="100.0"
+            style="-fx-background-color: linear-gradient(to bottom, #ff7e5f, #ff6347);
+                   -fx-background-radius: 15;
+                   -fx-text-fill: white;
+                   -fx-font-size: 14px;
+                   -fx-font-weight: bold;"
+            text="Back" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
 
-    <!-- Main VBox Layout -->
-    <VBox alignment="TOP_CENTER" layoutY="14.0" prefHeight="579.0" prefWidth="700.0" spacing="20" AnchorPane.bottomAnchor="-42.66666666666663" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="14.0">
+    <!-- Main Centered VBox -->
+    <VBox alignment="CENTER" spacing="20" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <!-- Title -->
-        <Label prefHeight="32.0" prefWidth="133.0" style="-fx-text-fill: white; -fx-font-size: 36px; -fx-font-weight: bold;" text="Sign Up">
+        <Label prefHeight="50.0" prefWidth="200.0"
+               style="-fx-text-fill: white; -fx-font-size: 36px; -fx-font-weight: bold;"
+               text="Sign Up">
             <font>
                 <Font name="Arial Bold" size="36.0" />
             </font>
@@ -33,43 +41,59 @@
 
         <!-- Username -->
         <HBox alignment="CENTER" spacing="10">
-            <Label style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" text="Username:" />
-            <TextField fx:id="usernameField" prefHeight="40.0" prefWidth="300.0" style="-fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #ffffff; -fx-border-width: 2px;" />
+            <Label style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" text="Username:" prefWidth="120" alignment="CENTER_RIGHT" />
+            <TextField fx:id="usernameField" prefHeight="40.0" prefWidth="300.0"
+                       style="-fx-background-radius: 15; -fx-border-radius: 15;
+                              -fx-border-color: #ffffff; -fx-border-width: 2px;" />
         </HBox>
 
         <!-- First Name -->
         <HBox alignment="CENTER" spacing="10">
-            <Label style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" text="First Name:" />
-            <TextField fx:id="firstNameField" prefHeight="40.0" prefWidth="300.0" style="-fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #ffffff; -fx-border-width: 2px;" />
+            <Label style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" text="First Name:" prefWidth="120" alignment="CENTER_RIGHT" />
+            <TextField fx:id="firstNameField" prefHeight="40.0" prefWidth="300.0"
+                       style="-fx-background-radius: 15; -fx-border-radius: 15;
+                              -fx-border-color: #ffffff; -fx-border-width: 2px;" />
         </HBox>
 
         <!-- Last Name -->
         <HBox alignment="CENTER" spacing="10">
-            <Label style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" text="Last Name:" />
-            <TextField fx:id="lastNameField" prefHeight="40.0" prefWidth="300.0" style="-fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #ffffff; -fx-border-width: 2px;" />
+            <Label style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" text="Last Name:" prefWidth="120" alignment="CENTER_RIGHT" />
+            <TextField fx:id="lastNameField" prefHeight="40.0" prefWidth="300.0"
+                       style="-fx-background-radius: 15; -fx-border-radius: 15;
+                              -fx-border-color: #ffffff; -fx-border-width: 2px;" />
         </HBox>
 
         <!-- Date of Birth -->
         <HBox alignment="CENTER" spacing="10">
-            <Label style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" text="Date of Birth:" />
-            <DatePicker fx:id="dobField" prefHeight="40.0" prefWidth="300.0" style="-fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #ffffff; -fx-border-width: 2px;" />
+            <Label style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" text="Date of Birth:" prefWidth="120" alignment="CENTER_RIGHT" />
+            <DatePicker fx:id="dobField" prefHeight="40.0" prefWidth="300.0"
+                        style="-fx-background-radius: 15; -fx-border-radius: 15;
+                               -fx-border-color: #ffffff; -fx-border-width: 2px;" />
         </HBox>
 
         <!-- Password -->
         <HBox alignment="CENTER" spacing="10">
-            <Label style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" text="Password:" />
-            <PasswordField fx:id="passwordField" prefHeight="40.0" prefWidth="300.0" style="-fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #ffffff; -fx-border-width: 2px;" />
+            <Label style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" text="Password:" prefWidth="120" alignment="CENTER_RIGHT" />
+            <PasswordField fx:id="passwordField" prefHeight="40.0" prefWidth="300.0"
+                           style="-fx-background-radius: 15; -fx-border-radius: 15;
+                                  -fx-border-color: #ffffff; -fx-border-width: 2px;" />
         </HBox>
 
         <!-- Submit Button -->
-        <Button onAction="#handleSubmit" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #34eb77; -fx-background-radius: 25; -fx-text-fill: white; -fx-font-size: 20px;" text="Submit">
-         <effect>
-            <InnerShadow>
-               <color>
-                  <Color red="0.2475000023841858" green="0.14000000059604645" blue="1.0" />
-               </color>
-            </InnerShadow>
-         </effect></Button>
-        <Label fx:id="errorLabel" alignment="CENTER" style="-fx-text-fill: yellow; -fx-font-size: 15px;" />
+        <Button onAction="#handleSubmit" prefHeight="50.0" prefWidth="200.0"
+                style="-fx-background-color: linear-gradient(to bottom, #38ef7d, #11998e);
+                       -fx-background-radius: 25;
+                       -fx-text-fill: white;
+                       -fx-font-size: 20px;
+                       -fx-font-weight: bold;"
+                text="Submit">
+            <effect>
+                <InnerShadow radius="5.0" color="#0d6647" />
+            </effect>
+        </Button>
+
+        <!-- Error Label -->
+        <Label fx:id="errorLabel" alignment="CENTER"
+               style="-fx-text-fill: yellow; -fx-font-size: 15px;" />
     </VBox>
 </AnchorPane>
