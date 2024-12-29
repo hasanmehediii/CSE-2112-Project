@@ -38,6 +38,9 @@ public class UI2Controller {
     private TableColumn<TimeSlot, String> priceColumn;
 
     @FXML
+    private Spinner<Integer> ticketSpinner;
+
+    @FXML
     private Button backButton;
 
     @FXML
@@ -55,6 +58,10 @@ public class UI2Controller {
 
         // Bind the observable list to the TableView
         timeSlotsTable.setItems(timeSlots);
+
+        // Initialize the Spinner with a default value
+        SpinnerValueFactory<Integer> valueFactory = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 10, 1);
+        ticketSpinner.setValueFactory(valueFactory);
     }
 
     public void setMovieData(String movieName, File thumbnailFile) {
@@ -95,13 +102,14 @@ public class UI2Controller {
     private void handleBooking() {
         // Get the selected row
         TimeSlot selectedSlot = timeSlotsTable.getSelectionModel().getSelectedItem();
+        int ticketsToBook = ticketSpinner.getValue();
 
         if (selectedSlot != null) {
             int availableSeats = Integer.parseInt(selectedSlot.getAvailableSeats().split(" ")[0]);
 
-            if (availableSeats > 0) {
+            if (ticketsToBook <= availableSeats) {
                 // Confirm booking
-                int updatedSeats = availableSeats - 1;
+                int updatedSeats = availableSeats - ticketsToBook;
 
                 selectedSlot.setAvailableSeats(updatedSeats + " available");
 
@@ -110,9 +118,9 @@ public class UI2Controller {
                 // Optional: Update database file to persist changes
                 updateDatabase(selectedSlot);
 
-                System.out.println("Booking successful! Seats remaining: " + updatedSeats);
+                System.out.println("Booking successful! " + ticketsToBook + " tickets booked. Seats remaining: " + updatedSeats);
             } else {
-                System.out.println("No seats available for this time slot.");
+                System.out.println("Not enough seats available. Seats remaining: " + availableSeats);
             }
         } else {
             System.out.println("Please select a time slot to book tickets.");
