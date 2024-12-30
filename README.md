@@ -79,10 +79,11 @@ Welcome here **JavaFX Ticket Booking App**. This is a basic type Ticket Booker D
 
 If you have any questions, feedback, or suggestions, feel free to reach out!  
 
-- **Name**: Mehedi Hasan  
+### 👤 Mehedi Hasan  
 - **Email**: [mehedi-2022415897@cs.du.ac.bd](mailto:mehedi-2022415897@cs.du.ac.bd)  
-- **University**: University of Dhaka, CSE Department
-
-- **Name**: Ibna Afra Roza 
-- **Email**: [email@cs.du.ac.bd](mailto:drop_your_mail@cs.du.ac.bd)  
 - **University**: University of Dhaka, CSE Department  
+
+### 👤 Ibna Afra Roza  
+- **Email**: [email@cs.du.ac.bd](mailto:email@cs.du.ac.bd)  
+- **University**: University of Dhaka, CSE Department  
+
