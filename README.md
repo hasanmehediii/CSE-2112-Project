@@ -81,9 +81,9 @@ If you have any questions, feedback, or suggestions, feel free to reach out!
 
 ### 👤 Mehedi Hasan  
 - **Email**: [mehedi-2022415897@cs.du.ac.bd](mailto:mehedi-2022415897@cs.du.ac.bd)  
-- **University**: University of Dhaka, CSE Department  
+- **University**: CSE, University of Dhaka 
 
 ### 👤 Ibna Afra Roza  
 - **Email**: [email@cs.du.ac.bd](mailto:email@cs.du.ac.bd)  
-- **University**: University of Dhaka, CSE Department  
+- **University**: CSE, University of Dhaka 
 
