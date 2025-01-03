@@ -31,6 +31,9 @@ public class UI1Controller {
     @FXML
     private Label movieLabel;
 
+    @FXML
+    private Button backButton; // Declare the back button
+
     private final List<File> thumbnails = new ArrayList<>();
     private final List<String> movieNames = new ArrayList<>();
     private int currentIndex = 0;
@@ -104,6 +107,21 @@ public class UI1Controller {
             stage.show();
         } catch (IOException e) {
             System.err.println("Error loading UI2.fxml: " + e.getMessage());
+        }
+    }
+
+    @FXML
+    private void handleBackButton() {
+        try {
+            // Load the MainMenu.fxml file
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("MainMenu.fxml"));
+            Stage stage = (Stage) backButton.getScene().getWindow(); // Get the current stage
+            stage.setScene(new Scene(loader.load(), 720, 600)); // Set the scene for the stage
+            stage.setTitle("Main Menu");
+
+            stage.show(); // Show the stage
+        } catch (IOException e) {
+            System.err.println("Error loading MainMenu.fxml: " + e.getMessage());
         }
     }
 
