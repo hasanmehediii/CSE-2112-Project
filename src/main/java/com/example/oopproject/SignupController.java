@@ -6,6 +6,7 @@ import javafx.scene.control.*;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.scene.control.Button;
 
 import java.io.BufferedWriter;
 import java.io.BufferedReader;
@@ -15,6 +16,7 @@ import java.io.IOException;
 
 public class SignupController {
 
+    public Button BackButton;
     @FXML
     private TextField usernameField;
 
@@ -46,6 +48,7 @@ public class SignupController {
             currentStage.sizeToScene();
             currentStage.show();
         } catch (IOException e) {
+            e.printStackTrace();  // This will print the stack trace to the console
             errorLabel.setText("Error: Unable to load the Login window.");
         }
     }
