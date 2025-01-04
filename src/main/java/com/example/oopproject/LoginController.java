@@ -57,8 +57,9 @@ public class LoginController {
         String username = usernameField.getText();
         String password = passwordField.getText();
 
-        if (checkCredentials(username, password)) {
-            openMainMenuWindow();
+        User loggedInUser = checkCredentials(username, password);
+        if (loggedInUser != null) {
+            openMainMenuWindow(loggedInUser);
         } else {
             errorLabel.setText("Invalid username or password!");
             fadeErrorLabel(); // Fade in the error message
@@ -86,44 +87,51 @@ public class LoginController {
         fadeError.play();
     }
 
-    private boolean checkCredentials(String username, String password) {
+    private User checkCredentials(String username, String password) {
         String dataFile = "src/main/java/com/example/oopproject/user_database.txt";
         try (BufferedReader reader = new BufferedReader(new FileReader(dataFile))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.split("\\|");
-                if (parts.length >= 2) {
+                if (parts.length >= 6) {
                     String fileUsername = parts[0].trim();
                     String filePassword = parts[1].trim();
 
                     if (fileUsername.equals(username) && filePassword.equals(password)) {
-                        return true;
+                        String firstName = parts[2].trim();
+                        String lastName = parts[3].trim();
+                        String dateOfBirth = parts[4].trim();
+                        double currentBalance = Double.parseDouble(parts[5].trim());
+                        return new User(fileUsername, filePassword, firstName, lastName, dateOfBirth, currentBalance, "");
                     }
                 }
             }
         } catch (IOException e) {
             errorLabel.setText("Error reading credentials file.");
         }
-        return false;
+        return null;
     }
 
-    private void openMainMenuWindow() {
+    private void openMainMenuWindow(User loggedInUser) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/oopproject/MainMenu.fxml"));
             Parent root = loader.load();
 
-            // Load and switch to the new scene
+            MainMenuController mainMenuController = loader.getController();
+
+            mainMenuController.setUser(loggedInUser);
+
             Stage currentStage = (Stage) usernameField.getScene().getWindow();
             Scene mainMenuScene = new Scene(root, 720, 600);
             currentStage.setScene(mainMenuScene);
             currentStage.sizeToScene();
             currentStage.show();
+
         } catch (IOException e) {
-            // e.printStackTrace();
             errorLabel.setText("Error: Unable to load Main Menu window. Check console for details.");
+            e.printStackTrace();
         }
     }
-
 
     private void openAdminDashboard() {
         System.out.println("Admin Dashboard Opened");
@@ -157,9 +165,5 @@ public class LoginController {
         } catch (IOException e) {
             errorLabel.setText("Error: Unable to load Sign-Up window.");
         }
-    }
-
-    public record User(String username, String password, String firstName, String lastName, String dateOfBirth,
-                       double currentBalance, String lastTransactions) {
     }
 }

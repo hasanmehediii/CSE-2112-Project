@@ -48,6 +48,8 @@ public class UI2Controller {
 
     private final ObservableList<TimeSlot> timeSlots = FXCollections.observableArrayList();
 
+    private String currentUser; // Variable to hold the current user name
+
     @FXML
     public void initialize() {
         // Set up columns in the TableView
@@ -96,6 +98,11 @@ public class UI2Controller {
         } catch (IOException e) {
             System.err.println("Error reading movie database: " + e.getMessage());
         }
+    }
+
+    // Set the current user for ticket booking
+    public void setUser(String username) {
+        this.currentUser = username;
     }
 
     @FXML

@@ -4,68 +4,114 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.image.ImageView;
-import javafx.stage.Stage;
-import javafx.scene.Parent;
 import javafx.scene.control.Label;
-
-import java.io.IOException;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 public class MainMenuController {
 
-    public ImageView backgroundImage;
-    public Button startButton;
-    public Button settingsButton;
+    public Button selectButton;
+    public Button profileButton;
+    public Button bookingButton;
     public Button logoutButton;
-    public Button aboutButton;
+    public ImageView backgroundImage;
+    private User currentUser;
+
     @FXML
     private Label profileDetailsLabel;
 
-    @FXML
-    public void initialize() {
-        profileDetailsLabel.setText("Welcome, User!");
+    public void setUser(User user) {
+        this.currentUser = user;
+        updateProfileDetails();
+    }
+
+    private void updateProfileDetails() {
+        if (currentUser != null) {
+            profileDetailsLabel.setText("Welcome, " + currentUser.firstName() + " " + currentUser.lastName() +
+                    "\nDate of Birth: " + currentUser.dateOfBirth() +
+                    "\nDue Amount: $" + currentUser.currentBalance());
+        }
     }
 
     @FXML
-    private void handleSelectMovies() {
+    public void handleSelectMovies() {
+        System.out.println("Select Movies button clicked");
+
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/oopproject/ui1.fxml"));
-            Parent root = loader.load();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("ui1.fxml"));
+            javafx.scene.layout.StackPane root = loader.load();
+            // Pass the current user data to the new controller
+            UI1Controller controller = loader.getController();
+            controller.setUser(currentUser);
 
-            Stage currentStage = (Stage) profileDetailsLabel.getScene().getWindow();
+            // Create a new scene and stage for ui1.fxml
+            Stage stage = new Stage();
+            stage.setTitle("Select Movies");
+            stage.setScene(new Scene(root, 720, 600));  // Set window size
+            stage.show();
 
-            Scene loginScene = new Scene(root, 720, 600);
-            currentStage.setScene(loginScene);
-            currentStage.setTitle("Login");
-            currentStage.show();
-        } catch (IOException e) {
+            // Close current main menu window
+            Stage currentStage = (Stage) selectButton.getScene().getWindow();
+            currentStage.close();
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     @FXML
-    private void handleSettings() {
-        System.out.println("Settings button clicked!");
-    }
+    public void handleProfile() {
+        System.out.println("Profile button clicked");
 
-    @FXML
-    private void handleAboutUs() {
-        System.out.println("About Us button clicked!");
-    }
-
-    @FXML
-    private void handleLogout() {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/oopproject/Login.fxml"));
-            Parent root = loader.load();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("profile.fxml"));
+            javafx.scene.layout.StackPane root = loader.load();
+            // Pass the current user data to the new controller
+            ProfileController controller = loader.getController();
+            controller.setUser(currentUser);
 
-            Stage currentStage = (Stage) profileDetailsLabel.getScene().getWindow();
+            // Create a new scene and stage for profile.fxml
+            Stage stage = new Stage();
+            stage.setTitle("My Profile");
+            stage.setScene(new Scene(root, 720, 600));  // Set window size
+            stage.show();
 
-            Scene loginScene = new Scene(root, 720, 600);
-            currentStage.setScene(loginScene);
-            currentStage.setTitle("Login");
-            currentStage.show();
-        } catch (IOException e) {
+            // Close current main menu window
+            Stage currentStage = (Stage) profileButton.getScene().getWindow();
+            currentStage.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    public void handleBooked() {
+        System.out.println("Booked button clicked");
+        // Implement functionality for "Booked" button if required
+    }
+
+    @FXML
+    public void handleLogout() {
+        System.out.println("Logout button clicked");
+
+        try {
+            // Reset any user data (optional)
+            currentUser = null;
+
+            // Load the login screen
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("login.fxml"));
+            AnchorPane root = loader.load();
+
+            // Create a new scene and stage for login.fxml
+            Stage stage = new Stage();
+            stage.setTitle("Login");
+            stage.setScene(new Scene(root, 720, 600));  // Set window size
+            stage.show();
+
+            // Close current main menu window
+            Stage currentStage = (Stage) logoutButton.getScene().getWindow();
+            currentStage.close();
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

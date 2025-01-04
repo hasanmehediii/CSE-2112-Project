@@ -38,6 +38,8 @@ public class UI1Controller {
     private final List<String> movieNames = new ArrayList<>();
     private int currentIndex = 0;
 
+    private User currentUser; // Add a field for the User object
+
     @FXML
     public void initialize() {
         loadMovieData();
@@ -74,6 +76,12 @@ public class UI1Controller {
         }
     }
 
+    // Set user data in the controller
+    public void setUser(User user) {
+        this.currentUser = user;
+        // You can add more code here to update the UI with user details (e.g., display balance, name)
+    }
+
     @FXML
     private void showPrevThumbnail() {
         if (currentIndex > 0) {
@@ -104,6 +112,9 @@ public class UI1Controller {
             UI2Controller controller = loader.getController();
             controller.setMovieData(movieNames.get(currentIndex), thumbnails.get(currentIndex));
 
+            // Optionally, you can also pass the currentUser to the next window if needed
+            controller.setUser(String.valueOf(currentUser));
+
             stage.show();
         } catch (IOException e) {
             System.err.println("Error loading UI2.fxml: " + e.getMessage());
@@ -118,6 +129,10 @@ public class UI1Controller {
             Stage stage = (Stage) backButton.getScene().getWindow(); // Get the current stage
             stage.setScene(new Scene(loader.load(), 720, 600)); // Set the scene for the stage
             stage.setTitle("Main Menu");
+
+            // Optionally, you can also pass the currentUser to the main menu if needed
+            MainMenuController mainMenuController = loader.getController();
+            mainMenuController.setUser(currentUser);
 
             stage.show(); // Show the stage
         } catch (IOException e) {
