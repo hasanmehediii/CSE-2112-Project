@@ -27,7 +27,7 @@
                             <Font name="System Bold" size="18.0" />
                         </font>
                     </Text>
-                    <TextField />
+                    <TextField fx:id="firstNameField" />
                 </HBox>
                 <HBox prefHeight="58.0" prefWidth="301.0">
                     <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Lastname:" wrappingWidth="94.69988059997559">
@@ -35,7 +35,7 @@
                             <Font name="System Bold" size="18.0" />
                         </font>
                     </Text>
-               <TextField />
+                    <TextField fx:id="lastNameField" />
                 </HBox>
                 <HBox prefHeight="59.0" prefWidth="301.0">
                     <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Date-of-Birth:" wrappingWidth="94.69988059997559">
@@ -43,7 +43,7 @@
                             <Font name="System Bold" size="14.0" />
                         </font>
                     </Text>
-                    <TextField />
+                    <TextField fx:id="dateOfBirthField" />
                 </HBox>
                 <HBox prefHeight="59.0" prefWidth="301.0">
                     <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Username:" wrappingWidth="94.69985008239746">
@@ -51,14 +51,14 @@
                             <Font name="System Bold" size="18.0" />
                         </font>
                     </Text>
-                    <TextField />
+                    <TextField fx:id="usernameField" />
                 </HBox>
             </VBox>
             <VBox prefHeight="252.0" prefWidth="277.0">
-                <TableView prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(to bottom, #000428, #004e92);">
+                <TableView fx:id="moviesTable" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(to bottom, #000428, #004e92);">
                     <columns>
-                        <TableColumn prefWidth="162.6666818857193" text="Movies" />
-                        <TableColumn prefWidth="110.66664123535156" text="Prices (Due)" />
+                        <TableColumn text="Movies" />
+                        <TableColumn text="Prices (Due)" />
                     </columns>
                 </TableView>
             </VBox>

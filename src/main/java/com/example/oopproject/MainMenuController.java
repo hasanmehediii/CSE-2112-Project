@@ -58,15 +58,16 @@ public class MainMenuController {
             e.printStackTrace();
         }
     }
-
     @FXML
     public void handleProfile() {
         System.out.println("Profile button clicked");
 
         try {
+            // Load the profile.fxml file
             FXMLLoader loader = new FXMLLoader(getClass().getResource("profile.fxml"));
-            javafx.scene.layout.StackPane root = loader.load();
-            // Pass the current user data to the new controller
+            javafx.scene.layout.StackPane root = loader.load(); // Cast as StackPane to match the FXML root
+
+            // Pass the current user data to the profile controller
             ProfileController controller = loader.getController();
             controller.setUser(currentUser);
 
@@ -76,7 +77,7 @@ public class MainMenuController {
             stage.setScene(new Scene(root, 720, 600));  // Set window size
             stage.show();
 
-            // Close current main menu window
+            // Close the current main menu window
             Stage currentStage = (Stage) profileButton.getScene().getWindow();
             currentStage.close();
         } catch (Exception e) {
