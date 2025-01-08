@@ -15,47 +15,62 @@
 <?import javafx.scene.text.Text?>
 
 <StackPane style="-fx-background-color: linear-gradient(to bottom, #000428, #004e92);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oopproject.ProfileController">
-    <AnchorPane maxHeight="436.0" maxWidth="600.0" prefHeight="436.0" prefWidth="591.0" style="-fx-background-color: linear-gradient(to bottom, #000428, #004e92);">
-        <ImageView fitHeight="96.0" fitWidth="111.0" layoutX="241.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+    <AnchorPane maxHeight="500.0" maxWidth="700.0" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: linear-gradient(to bottom, #000428, #004e92); -fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 15;">
+        <!-- User Image -->
+        <ImageView fitHeight="96.0" fitWidth="96.0" layoutX="302.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
             <Image url="@user.png" />
         </ImageView>
-        <HBox layoutX="14.0" layoutY="170.0" prefHeight="221.0" prefWidth="577.0">
-            <VBox prefHeight="252.0" prefWidth="301.0">
-                <HBox prefHeight="57.0" prefWidth="301.0">
-                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Firstname:" wrappingWidth="94.69988059997559">
+        <Text fill="WHITE" layoutX="255.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Profile Information" wrappingWidth="200.0">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Text>
+
+        <!-- Profile Information -->
+        <HBox layoutX="50.0" layoutY="170.0" prefHeight="250.0" prefWidth="600.0" spacing="20.0">
+            <VBox prefWidth="300.0" spacing="15.0">
+                <HBox spacing="10.0">
+                    <Text fill="WHITE" text="Firstname:" wrappingWidth="100.0">
                         <font>
-                            <Font name="System Bold" size="18.0" />
+                            <Font name="System Bold" size="16.0" />
                         </font>
                     </Text>
-                    <TextField fx:id="firstNameField" />
+                    <TextField fx:id="firstNameField" style="-fx-background-radius: 5; -fx-border-radius: 5;" />
                 </HBox>
-                <HBox prefHeight="58.0" prefWidth="301.0">
-                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Lastname:" wrappingWidth="94.69988059997559">
+                <HBox spacing="10.0">
+                    <Text fill="WHITE" text="Lastname:" wrappingWidth="100.0">
                         <font>
-                            <Font name="System Bold" size="18.0" />
+                            <Font name="System Bold" size="16.0" />
                         </font>
                     </Text>
-                    <TextField fx:id="lastNameField" />
+                    <TextField fx:id="lastNameField" style="-fx-background-radius: 5; -fx-border-radius: 5;" />
                 </HBox>
-                <HBox prefHeight="59.0" prefWidth="301.0">
-                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Date-of-Birth:" wrappingWidth="94.69988059997559">
+                <HBox spacing="10.0">
+                    <Text fill="WHITE" text="Date of Birth:" wrappingWidth="100.0">
                         <font>
-                            <Font name="System Bold" size="14.0" />
+                            <Font name="System Bold" size="16.0" />
                         </font>
                     </Text>
-                    <TextField fx:id="dateOfBirthField" />
+                    <TextField fx:id="dateOfBirthField" style="-fx-background-radius: 5; -fx-border-radius: 5;" />
                 </HBox>
-                <HBox prefHeight="59.0" prefWidth="301.0">
-                    <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Username:" wrappingWidth="94.69985008239746">
+                <HBox spacing="10.0">
+                    <Text fill="WHITE" text="Username:" wrappingWidth="100.0">
                         <font>
-                            <Font name="System Bold" size="18.0" />
+                            <Font name="System Bold" size="16.0" />
                         </font>
                     </Text>
-                    <TextField fx:id="usernameField" />
+                    <TextField fx:id="usernameField" style="-fx-background-radius: 5; -fx-border-radius: 5;" />
                 </HBox>
             </VBox>
-            <VBox prefHeight="252.0" prefWidth="277.0">
-                <TableView fx:id="moviesTable" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(to bottom, #000428, #004e92);">
+
+            <!-- Movies Table -->
+            <VBox prefWidth="270.0" spacing="10.0">
+                <Text fill="WHITE" text="Your Booked Movies" wrappingWidth="200.0">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Text>
+                <TableView fx:id="moviesTable" prefHeight="200.0" prefWidth="250.0" style="-fx-background-color: linear-gradient(to bottom, #1e3c72, #2a5298); -fx-border-color: white; -fx-border-radius: 5;">
                     <columns>
                         <TableColumn text="Movies" />
                         <TableColumn text="Prices (Due)" />
@@ -63,7 +78,9 @@
                 </TableView>
             </VBox>
         </HBox>
-        <Button fx:id="backButton" onAction="#handleBackButton" prefHeight="45.0" prefWidth="120.0" style="-fx-background-color: linear-gradient(#ff6f61, #ff4757); -fx-text-fill: white; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #d63031; -fx-border-width: 2;" text="Back">
+
+        <!-- Back Button -->
+        <Button fx:id="backButton" layoutX="290.0" layoutY="430.0" onAction="#handleBackButton" prefHeight="45.0" prefWidth="120.0" style="-fx-background-color: linear-gradient(#ff6f61, #ff4757); -fx-text-fill: white; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #d63031; -fx-border-width: 2;" text="Back">
             <font>
                 <Font name="System Bold" size="16.0" />
             </font>
