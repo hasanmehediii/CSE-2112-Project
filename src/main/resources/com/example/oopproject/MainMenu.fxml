@@ -6,6 +6,10 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oopproject.MainMenuController">
     <!-- Background Image -->
@@ -13,25 +17,48 @@
         <Image url="@background.jpg" />
     </ImageView>
 
-    <!-- Profile Details Label -->
-    <Label fx:id="profileDetailsLabel" layoutX="50.0" layoutY="50.0" style="-fx-font-size: 18; -fx-text-fill: white;" />
-
     <!-- Menu Buttons -->
-    <VBox alignment="CENTER" layoutX="300.0" layoutY="200.0" spacing="20.0">
+    <VBox alignment="CENTER" layoutX="261.0" layoutY="67.0" prefHeight="415.0" prefWidth="221.0" spacing="20.0">
+        <Label text="Main Menu">
+            <font>
+                <Font name="System Bold" size="28.0" />
+            </font>
+            <textFill>
+                <LinearGradient endX="1.0" endY="1.0">
+                    <stops>
+                        <Stop>
+                            <color>
+                                <Color red="1.0" green="0.599" blue="0.02" />
+                            </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                            <color>
+                                <Color red="0.97" green="0.05" blue="1.0" />
+                            </color>
+                        </Stop>
+                    </stops>
+                </LinearGradient>
+            </textFill>
+        </Label>
+
         <!-- Select Movies Button -->
         <Button fx:id="selectButton" onAction="#handleSelectMovies" prefHeight="47.0" prefWidth="161.0"
-                style="-fx-background-color: linear-gradient(to bottom, #00c6ff, #0072ff); -fx-background-radius: 25; -fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 5);" text="Select Movies" />
+                style="-fx-background-color: linear-gradient(to bottom, #ff9a9e, #fad0c4); -fx-background-radius: 25; -fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 5);"
+                text="Select Movies" onMouseEntered="#animateButton" onMouseExited="#resetButtonAnimation"/>
 
         <!-- My Profile Button -->
         <Button fx:id="profileButton" onAction="#handleProfile" prefHeight="44.0" prefWidth="166.0"
-                style="-fx-background-color: linear-gradient(to bottom, #ff7e5f, #ff6347); -fx-background-radius: 25; -fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 5);" text="My Profile" />
+                style="-fx-background-color: linear-gradient(to bottom, #a18cd1, #fbc2eb); -fx-background-radius: 25; -fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 5);"
+                text="My Profile" onMouseEntered="#animateButton" onMouseExited="#resetButtonAnimation"/>
 
         <!-- Booked Button -->
         <Button fx:id="bookingButton" onAction="#handleBooked" prefHeight="46.0" prefWidth="170.0"
-                style="-fx-background-color: linear-gradient(to bottom, #38ef7d, #11998e); -fx-background-radius: 25; -fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 5);" text="Booked" />
+                style="-fx-background-color: linear-gradient(to bottom, #43e97b, #38f9d7); -fx-background-radius: 25; -fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 5);"
+                text="Booked" onMouseEntered="#animateButton" onMouseExited="#resetButtonAnimation"/>
 
         <!-- LogOut Button -->
         <Button fx:id="logoutButton" onAction="#handleLogout" prefHeight="45.0" prefWidth="171.0"
-                style="-fx-background-color: linear-gradient(to bottom, #ff7e5f, #ff6347); -fx-background-radius: 25; -fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 5);" text="LogOut" />
+                style="-fx-background-color: linear-gradient(to bottom, #667eea, #764ba2); -fx-background-radius: 25; -fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 5);"
+                text="LogOut" onMouseEntered="#animateButton" onMouseExited="#resetButtonAnimation"/>
     </VBox>
 </AnchorPane>
