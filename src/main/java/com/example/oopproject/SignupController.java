@@ -37,21 +37,22 @@ public class SignupController {
 
     @FXML
     public void handleBack() {
+        System.out.println("Back button clicked"); // Debug message
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/oopproject/login.fxml"));
-            Parent root = loader.load();
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("login.fxml"));
+            Parent root = fxmlLoader.load();
 
-            // Get current stage and set new scene
             Stage currentStage = (Stage) usernameField.getScene().getWindow();
-            Scene loginScene = new Scene(root);
+            Scene loginScene = new Scene(root, 720, 600);
             currentStage.setScene(loginScene);
             currentStage.sizeToScene();
             currentStage.show();
         } catch (IOException e) {
-            e.printStackTrace();  // This will print the stack trace to the console
+            e.printStackTrace();
             errorLabel.setText("Error: Unable to load the Login window.");
         }
     }
+
     @FXML
     public void handleSubmit() {
         String username = usernameField.getText();
@@ -60,7 +61,6 @@ public class SignupController {
         String dob = dobField.getValue() != null ? dobField.getValue().toString() : "";
         String password = passwordField.getText();
 
-        // Validate input fields
         if (username.isEmpty() || firstName.isEmpty() || lastName.isEmpty() || dob.isEmpty() || password.isEmpty()) {
             errorLabel.setText("All fields are required!");
             return;
@@ -82,7 +82,6 @@ public class SignupController {
             return;
         }
 
-        // Save user data to file
         String userData = username + "|" + password + "|" + firstName + "|" + lastName + "|" + dob + "|0.0|None";
 
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(dataFile, true))) {

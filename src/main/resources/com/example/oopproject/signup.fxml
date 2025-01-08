@@ -1,90 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.effect.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
-<AnchorPane prefHeight="621.0" prefWidth="700.0" style="-fx-background-color: linear-gradient(to bottom, #000428, #004e92);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oopproject.SignupController">
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-    <!-- Back Button -->
-    <Button fx:id="BackButton" onAction="#handleBack" prefHeight="40.0" prefWidth="100.0"
-            style="-fx-background-color: linear-gradient(to bottom, #ff7e5f, #ff6347);
-               -fx-background-radius: 15;
-               -fx-text-fill: white;
-               -fx-font-size: 14px;
-               -fx-font-weight: bold;"
-            text="Back" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+<AnchorPane prefHeight="621.0" prefWidth="700.0" style="-fx-background-color: linear-gradient(to bottom, #000428, #004e92);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oopproject.SignupController">
 
     <!-- Main Centered VBox -->
     <VBox alignment="CENTER" spacing="20" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <!-- Title -->
-        <Label prefHeight="50.0" prefWidth="200.0"
-               style="-fx-text-fill: white; -fx-font-size: 36px; -fx-font-weight: bold;"
-               text="Sign Up">
+        <Label alignment="TOP_CENTER" prefHeight="50.0" prefWidth="200.0" style="-fx-text-fill: white; -fx-font-size: 36px; -fx-font-weight: bold;" text="Sign Up" textAlignment="CENTER">
             <font>
                 <Font name="Arial Bold" size="36.0" />
             </font>
         </Label>
         <ImageView fitHeight="64.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true">
-            <Image url="@user.png" />
+            <Image url="@teamwork.png" />
         </ImageView>
 
         <!-- Username -->
         <HBox alignment="CENTER" spacing="10">
-            <Label style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" text="Username:" prefWidth="120" alignment="CENTER_RIGHT" />
-            <TextField fx:id="usernameField" prefHeight="40.0" prefWidth="300.0"
-                       style="-fx-background-radius: 15; -fx-border-radius: 15;
-                              -fx-border-color: #ffffff; -fx-border-width: 2px;" />
+            <Label alignment="CENTER_RIGHT" prefWidth="120" style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" text="Username:" />
+            <TextField fx:id="usernameField" prefHeight="40.0" prefWidth="300.0" style="-fx-background-radius: 15; -fx-border-radius: 15;                               -fx-border-color: #ffffff; -fx-border-width: 2px;" />
         </HBox>
 
         <!-- First Name -->
         <HBox alignment="CENTER" spacing="10">
-            <Label style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" text="First Name:" prefWidth="120" alignment="CENTER_RIGHT" />
-            <TextField fx:id="firstNameField" prefHeight="40.0" prefWidth="300.0"
-                       style="-fx-background-radius: 15; -fx-border-radius: 15;
-                              -fx-border-color: #ffffff; -fx-border-width: 2px;" />
+            <Label alignment="CENTER_RIGHT" prefWidth="120" style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" text="First Name:" />
+            <TextField fx:id="firstNameField" prefHeight="40.0" prefWidth="300.0" style="-fx-background-radius: 15; -fx-border-radius: 15;                               -fx-border-color: #ffffff; -fx-border-width: 2px;" />
         </HBox>
 
         <!-- Last Name -->
         <HBox alignment="CENTER" spacing="10">
-            <Label style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" text="Last Name:" prefWidth="120" alignment="CENTER_RIGHT" />
-            <TextField fx:id="lastNameField" prefHeight="40.0" prefWidth="300.0"
-                       style="-fx-background-radius: 15; -fx-border-radius: 15;
-                              -fx-border-color: #ffffff; -fx-border-width: 2px;" />
+            <Label alignment="CENTER_RIGHT" prefWidth="120" style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" text="Last Name:" />
+            <TextField fx:id="lastNameField" prefHeight="40.0" prefWidth="300.0" style="-fx-background-radius: 15; -fx-border-radius: 15;                               -fx-border-color: #ffffff; -fx-border-width: 2px;" />
         </HBox>
 
         <!-- Date of Birth -->
         <HBox alignment="CENTER" spacing="10">
-            <Label style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" text="Date of Birth:" prefWidth="120" alignment="CENTER_RIGHT" />
-            <DatePicker fx:id="dobField" prefHeight="40.0" prefWidth="300.0"
-                        style="-fx-background-radius: 15; -fx-border-radius: 15;
-                               -fx-border-color: #ffffff; -fx-border-width: 2px;" />
+            <Label alignment="CENTER_RIGHT" prefWidth="120" style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" text="Date of Birth:" />
+            <DatePicker fx:id="dobField" prefHeight="40.0" prefWidth="300.0" style="-fx-background-radius: 15; -fx-border-radius: 15;                                -fx-border-color: #ffffff; -fx-border-width: 2px;" />
         </HBox>
 
         <!-- Password -->
         <HBox alignment="CENTER" spacing="10">
-            <Label style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" text="Password:" prefWidth="120" alignment="CENTER_RIGHT" />
-            <PasswordField fx:id="passwordField" prefHeight="40.0" prefWidth="300.0"
-                           style="-fx-background-radius: 15; -fx-border-radius: 15;
-                                  -fx-border-color: #ffffff; -fx-border-width: 2px;" />
+            <Label alignment="CENTER_RIGHT" prefWidth="120" style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" text="Password:" />
+            <PasswordField fx:id="passwordField" prefHeight="40.0" prefWidth="300.0" style="-fx-background-radius: 15; -fx-border-radius: 15;                                   -fx-border-color: #ffffff; -fx-border-width: 2px;" />
         </HBox>
-
-        <!-- Submit Button -->
-        <Button onAction="#handleSubmit" prefHeight="50.0" prefWidth="200.0"
-                style="-fx-background-color: linear-gradient(to bottom, #38ef7d, #11998e);
-                       -fx-background-radius: 25;
-                       -fx-text-fill: white;
-                       -fx-font-size: 20px;
-                       -fx-font-weight: bold;"
-                text="Submit">
-            <effect>
-                <InnerShadow radius="5.0" color="#0d6647" />
-            </effect>
-        </Button>
+      <HBox alignment="CENTER" prefHeight="62.0" prefWidth="700.0" spacing="20.0">
+         <children>
+      
+              <!-- Submit Button -->
+              <Button onAction="#handleSubmit" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(to bottom, #38ef7d, #11998e);                        -fx-background-radius: 25;                        -fx-text-fill: white;                        -fx-font-size: 20px;             -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 5);                        -fx-font-weight: bold;" text="Submit">
+                  <effect>
+                      <InnerShadow color="#0d6647" radius="5.0" />
+                  </effect>
+              </Button>
+         
+             <!-- Back Button -->
+             <Button fx:id="BackButton" onAction="#handleBack" prefHeight="49.0" prefWidth="196.0" style="-fx-background-color: linear-gradient(to bottom, #ff7e5f, #ff6347); -fx-background-radius: 25; -fx-text-fill: white; -fx-font-size: 20px; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 5); -fx-font-weight: bold;" text="Back" />
+         </children>
+      </HBox>
 
         <!-- Error Label -->
-        <Label fx:id="errorLabel" alignment="CENTER"
-               style="-fx-text-fill: yellow; -fx-font-size: 15px;" />
+        <Label fx:id="errorLabel" alignment="CENTER" style="-fx-text-fill: yellow; -fx-font-size: 15px;" />
     </VBox>
 </AnchorPane>
