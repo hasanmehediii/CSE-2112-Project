@@ -27,10 +27,7 @@ public class LoginController {
 
     @FXML
     public void initialize() {
-        // Fade in the username, password fields, and buttons
         applyFadeInAnimation(usernameField, passwordField, loginButton, adminLoginButton, signUpButton, errorLabel);
-
-        // Apply translation (slide-in) effect for fields and buttons
         applyTranslateAnimation(usernameField, passwordField, loginButton, adminLoginButton, signUpButton);
     }
 
@@ -46,8 +43,8 @@ public class LoginController {
     private void applyTranslateAnimation(javafx.scene.Node... nodes) {
         for (javafx.scene.Node node : nodes) {
             TranslateTransition translateTransition = new TranslateTransition(Duration.millis(1000), node);
-            translateTransition.setFromX(-300); // Start from left outside the screen
-            translateTransition.setToX(0); // End at the original position
+            translateTransition.setFromX(-300);
+            translateTransition.setToX(0);
             translateTransition.play();
         }
     }
@@ -62,7 +59,7 @@ public class LoginController {
             openMainMenuWindow(loggedInUser);
         } else {
             errorLabel.setText("Invalid username or password!");
-            fadeErrorLabel(); // Fade in the error message
+            fadeErrorLabel();
         }
     }
 
@@ -75,12 +72,11 @@ public class LoginController {
             openAdminDashboard();
         } else {
             errorLabel.setText("Wrong Admin Username/Password");
-            fadeErrorLabel(); // Fade in the error message
+            fadeErrorLabel();
         }
     }
 
     private void fadeErrorLabel() {
-        // Apply fade transition for error label
         FadeTransition fadeError = new FadeTransition(Duration.millis(500), errorLabel);
         fadeError.setFromValue(0.0);
         fadeError.setToValue(1.0);
@@ -89,6 +85,7 @@ public class LoginController {
 
     private User checkCredentials(String username, String password) {
         String dataFile = "src/main/java/com/example/oopproject/user_database.txt";
+        //username|password|firstname|lastname|DOB|Due|Tickets
         try (BufferedReader reader = new BufferedReader(new FileReader(dataFile))) {
             String line;
             while ((line = reader.readLine()) != null) {

@@ -98,7 +98,6 @@ public class StartController {
 
     @FXML
     private void exit() {
-        System.out.println("Exit button clicked!");
         System.exit(0);
     }
 }

@@ -37,7 +37,7 @@ public class SignupController {
 
     @FXML
     public void handleBack() {
-        System.out.println("Back button clicked"); // Debug message
+        System.out.println("Back button clicked");
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("login.fxml"));
             Parent root = fxmlLoader.load();
