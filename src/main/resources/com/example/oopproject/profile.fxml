@@ -70,12 +70,18 @@
                         <Font name="System Bold" size="16.0" />
                     </font>
                 </Text>
-                <TableView fx:id="moviesTable" prefHeight="200.0" prefWidth="250.0" style="-fx-background-color: linear-gradient(to bottom, #1e3c72, #2a5298); -fx-border-color: white; -fx-border-radius: 5;">
+                <TableView fx:id="moviesTable" prefHeight="200.0" prefWidth="400.0">
                     <columns>
-                        <TableColumn text="Movies" />
-                        <TableColumn text="Prices (Due)" />
+                        <TableColumn fx:id="movieColumn" text="Movie Name" />
+                        <TableColumn fx:id="ticketsColumn" text="Tickets" />
                     </columns>
                 </TableView>
+                <Text fx:id="totalDueText" layoutX="50.0" layoutY="440.0" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Due: $0.0" wrappingWidth="200.0">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Text>
+
             </VBox>
         </HBox>
 

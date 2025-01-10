@@ -5,4 +5,8 @@ public record User(String username, String password, String firstName, String la
     public String getUsername() {
         return username;
     }
+
+    public double currentBalance() {
+        return currentBalance;
+    }
 }
