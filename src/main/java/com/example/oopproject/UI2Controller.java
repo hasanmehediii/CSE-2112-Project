@@ -48,7 +48,7 @@ public class UI2Controller {
 
     private final ObservableList<TimeSlot> timeSlots = FXCollections.observableArrayList();
 
-    private String currentUser; // Variable to hold the current user name
+    private User currentUser; // Variable to hold the current user name
 
     @FXML
     public void initialize() {
@@ -101,8 +101,8 @@ public class UI2Controller {
     }
 
     // Set the current user for ticket booking
-    public void setUser(String username) {
-        this.currentUser = username;
+    public void setUser(User user) {
+        this.currentUser = user;
     }
 
     @FXML
@@ -135,14 +135,22 @@ public class UI2Controller {
                         selectedSlot.setAvailableSeats(updatedSeats + " available");
                         timeSlotsTable.refresh();
 
-                        // Optional: Update database file to persist changes
+                        // Update the movie database
                         updateDatabase(selectedSlot);
+
+                        // Calculate total ticket price
+                        double ticketPrice = Double.parseDouble(selectedSlot.getPrice());
+                        double totalCost = ticketsToBook * ticketPrice;
+
+                        // Update user data
+                        updateUserData(currentUser.getUsername(), totalCost, movieLabel.getText(), ticketsToBook);
 
                         Alert successDialog = new Alert(Alert.AlertType.INFORMATION);
                         successDialog.setTitle("Booking Confirmed");
                         successDialog.setHeaderText(null);
                         successDialog.setContentText(
-                                "Booking successful!\n" + ticketsToBook + " tickets booked.\nSeats remaining: " + updatedSeats
+                                "Booking successful!\n" + ticketsToBook + " tickets booked.\nSeats remaining: " + updatedSeats +
+                                        "\nTotal Cost: $" + totalCost
                         );
                         successDialog.showAndWait();
                     } else {
@@ -164,6 +172,7 @@ public class UI2Controller {
             errorDialog.showAndWait();
         }
     }
+
 
     private void updateDatabase(TimeSlot updatedSlot) {
         try {
@@ -187,10 +196,41 @@ public class UI2Controller {
             System.err.println("Error updating database: " + e.getMessage());
         }
     }
+    private void updateUserData(String username, double amountToAdd, String movieName, int ticketsBooked) {
+        try {
+            List<String> lines = Files.readAllLines(Paths.get("src/main/java/com/example/oopproject/user_database.txt"));
+            for (int i = 0; i < lines.size(); i++) {
+                String[] parts = lines.get(i).split("\\|");
+                if (parts[0].equals(username)) {
+                    // Update the balance
+                    double currentBalance = Double.parseDouble(parts[5].trim());
+                    currentBalance += amountToAdd;
+                    parts[5] = String.valueOf(currentBalance);
+
+                    // Append new transaction details to the existing ones
+                    String existingTransactions = parts[6].trim();
+                    String newTransaction = movieName + " (" + ticketsBooked + " tickets)";
+                    if (!existingTransactions.isEmpty()) {
+                        parts[6] = existingTransactions + ", " + newTransaction;
+                    } else {
+                        parts[6] = newTransaction;
+                    }
+
+                    // Update the line in the list
+                    lines.set(i, String.join("|", parts));
+                    break;
+                }
+            }
+
+            // Write the updated lines back to the file
+            Files.write(Paths.get("src/main/java/com/example/oopproject/user_database.txt"), lines);
+        } catch (IOException e) {
+            System.err.println("Error updating user data: " + e.getMessage());
+        }
+    }
 
     @FXML
     private void handleBack() {
-        // Close the current window
         movieLabel.getScene().getWindow().hide();
     }
 

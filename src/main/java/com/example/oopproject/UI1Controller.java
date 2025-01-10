@@ -113,7 +113,7 @@ public class UI1Controller {
             controller.setMovieData(movieNames.get(currentIndex), thumbnails.get(currentIndex));
 
             // Optionally, you can also pass the currentUser to the next window if needed
-            controller.setUser(String.valueOf(currentUser));
+            controller.setUser(currentUser);
 
             stage.show();
         } catch (IOException e) {

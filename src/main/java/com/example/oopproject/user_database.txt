@@ -9,4 +9,4 @@ valverde|madrid|Fede|Valverde|2024-12-02|0.0|None
 kross|tk8|Toni|Kross|2024-12-06|0.0|None
 luka|lm10|Luka|Modric|2024-11-22|0.0|None
 jarin|jarinafra|jarin|afra|2024-12-22|0.0|None
-mehedihasan|mmmm|Mehedi|Hasan|2025-01-13|0.0|None
+mehedihasan|mmmm|Mehedi|Hasan|2025-01-13|4046.0|Intersellar (2 tickets), Shutter_Island (2 tickets)
