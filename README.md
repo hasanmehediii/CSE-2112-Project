@@ -84,6 +84,6 @@ If you have any questions, feedback, or suggestions, feel free to reach out!
 - **University**: CSE, University of Dhaka 
 
 ### 👤 Ibna Afra Roza  
-- **Email**: [email@cs.du.ac.bd](mailto:email@cs.du.ac.bd)  
+- **Email**: [ibnaafra-2022015891@cs.du.ac.bd](mailto:ibnaafra-2022015891@cs.du.ac.bd)  
 - **University**: CSE, University of Dhaka 
 
