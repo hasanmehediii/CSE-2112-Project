@@ -1,4 +1,4 @@
-Inception|10.0|10:00 AM|50|10 available|1:00 PM|40|5 available|3:00 PM|30|10 available
+Inception|10.0|10:00 AM|50|38 available|1:00 PM|40|21 available|3:00 PM|80|57 available
 Avengers_Endgame|12.0|11:00 AM|60|11 available|2:00 PM|50|13 available|6:00 PM|70|5 available
 The_Dark_Knight|15.0|9:30 AM|40|5 available|12:30 PM|35|10 available|8:00 PM|45|6 available
 Intersellar|13.0|10:15 AM|50|5 available|1:15 PM|40|8 available|4:15 PM|30|5 available
@@ -6,6 +6,6 @@ Parasite|9.0|11:45 AM|50|22 available|3:00 PM|30|5 available|7:00 PM|20|2 availa
 Joker|10.0|12:00 PM|55|15 available|4:00 PM|45|6 available|8:30 PM|40|10 available
 Titanic|9.0|9:00 AM|60|20 available|2:30 PM|50|10 available|6:30 PM|40|5 available
 The_Godfather|15.0|1:00 PM|35|5 available|5:00 PM|30|5 available|9:00 PM|25|3 available
-Shutter_Island|10.0|10:30 AM|50|10 available|3:30 PM|45|6 available|7:30 PM|40|5 available
-CSEDU|100|8.30 AM|60|10 available|10.00 AM|10|3 available|6.00 PM|10|2 available
-Moana_2|1000.0|10.00 AM|100|25 available|3.00 PM|60|35 available|6.00 PM|10|5 available
+Shutter_Island|10.0|10:30 AM|50|10 available|3:30 PM|45|5 available|7:30 PM|40|5 available
+CSEDU|100|8.30 AM|60|9 available|10.00 AM|10|3 available|6.00 PM|10|2 available
+Moana_2|1000.0|10.00 AM|100|25 available|3.00 PM|60|30 available|6.00 PM|10|5 available

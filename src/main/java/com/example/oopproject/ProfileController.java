@@ -61,22 +61,22 @@ public class ProfileController {
         ObservableList<MovieBooking> bookings = FXCollections.observableArrayList();
 
         if (currentUser != null) {
-            System.out.println("Current User Details: " + currentUser);
-            System.out.println("Last Transactions: " + currentUser.lastTransactions());
-
             String transactions = currentUser.lastTransactions();
+            System.out.println("Transactions String: " + transactions);
+
             if (transactions != null && !transactions.trim().isEmpty() && !transactions.equalsIgnoreCase("None")) {
                 String[] movies = transactions.split(",\\s*");
                 for (String movieEntry : movies) {
                     try {
+                        // Split each entry into movie name and ticket count
                         String[] details = movieEntry.split(" \\(");
                         if (details.length == 2) {
                             String movieName = details[0].trim();
                             int tickets = Integer.parseInt(details[1].replace(" tickets)", "").trim());
                             bookings.add(new MovieBooking(movieName, tickets));
-                            System.out.println("Parsed Movie: " + movieName + ", Tickets: " + tickets);
+                            System.out.println("Added MovieBooking: " + movieName + " with " + tickets + " tickets");
                         } else {
-                            System.err.println("Skipping invalid movie entry: " + movieEntry);
+                            System.err.println("Invalid movie entry: " + movieEntry);
                         }
                     } catch (Exception e) {
                         System.err.println("Error parsing movie entry: " + movieEntry + " - " + e.getMessage());
@@ -86,25 +86,22 @@ public class ProfileController {
                 System.out.println("No transactions to display.");
             }
         } else {
-            System.err.println("currentUser is null.");
+            System.err.println("Current user is null.");
         }
 
-        System.out.println("Bookings to display in table: " + bookings);
-
-        // Ensure the column names match the MovieBooking class properties
+        // Set column value factories to map data with table columns
         movieColumn.setCellValueFactory(new PropertyValueFactory<>("movieName"));
         ticketsColumn.setCellValueFactory(new PropertyValueFactory<>("tickets"));
 
-        // Clear existing items and update the table
-        moviesTable.getItems().clear();
+        // Update the table with parsed bookings
         moviesTable.setItems(bookings);
 
         // Update the total due text
         double totalDue = currentUser != null ? currentUser.currentBalance() : 0.0;
         totalDueText.setText("Total Due: $" + totalDue);
 
-        // Debugging logs
-        System.out.println("Table updated successfully.");
+        // Debug Log
+        System.out.println("Movies Table Updated Successfully!");
     }
 
 
