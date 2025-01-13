@@ -27,6 +27,22 @@ Welcome here **JavaFX Ticket Booking App**. This is a basic type Ticket Booker D
 
 ---
 
+## **Screenshots 📸**
+
+![Start](readmepic/start.png)  
+_Start Menu Screen._
+
+![Login](readmepic/login.png)  
+_Login Screen._
+
+![Movie_Select](readmepic/moviemenu.png)  
+_Movie Select Menu Screen._
+
+![Buy](readmepic/moviebuy.png)  
+_Ticket Buying Screen._
+
+--- 
+
 ## 🚀 Getting Started
 
 ### 🔧 Prerequisites
