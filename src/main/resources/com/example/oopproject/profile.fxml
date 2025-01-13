@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
@@ -17,19 +15,21 @@
 <StackPane style="-fx-background-color: linear-gradient(to bottom, #000428, #004e92);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oopproject.ProfileController">
     <AnchorPane maxHeight="500.0" maxWidth="700.0" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: linear-gradient(to bottom, #000428, #004e92); -fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 15;">
         <!-- User Image -->
-        <ImageView fitHeight="96.0" fitWidth="96.0" layoutX="302.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="130.0" fitWidth="132.0" layoutX="285.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
             <Image url="@user.png" />
         </ImageView>
-        <Text fill="WHITE" layoutX="255.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Profile Information" wrappingWidth="200.0">
+
+        <Text fill="WHITE" layoutX="250.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Profile Information" textAlignment="CENTER" wrappingWidth="200.0">
             <font>
                 <Font name="System Bold" size="20.0" />
             </font>
         </Text>
 
-        <!-- Profile Information -->
-        <HBox layoutX="50.0" layoutY="170.0" prefHeight="250.0" prefWidth="600.0" spacing="20.0">
-            <VBox prefWidth="300.0" spacing="15.0">
-                <HBox spacing="10.0">
+        <!-- Profile Information (Split into two columns) -->
+        <HBox layoutX="50.0" layoutY="209.0" prefHeight="199.0" prefWidth="600.0" spacing="40.0">
+            <!-- First Column (First Name and Date of Birth) -->
+            <VBox prefWidth="250.0" spacing="15.0">
+                <HBox alignment="CENTER" prefHeight="59.0" prefWidth="240.0" spacing="10.0">
                     <Text fill="WHITE" text="Firstname:" wrappingWidth="100.0">
                         <font>
                             <Font name="System Bold" size="16.0" />
@@ -37,15 +37,7 @@
                     </Text>
                     <TextField fx:id="firstNameField" style="-fx-background-radius: 5; -fx-border-radius: 5;" />
                 </HBox>
-                <HBox spacing="10.0">
-                    <Text fill="WHITE" text="Lastname:" wrappingWidth="100.0">
-                        <font>
-                            <Font name="System Bold" size="16.0" />
-                        </font>
-                    </Text>
-                    <TextField fx:id="lastNameField" style="-fx-background-radius: 5; -fx-border-radius: 5;" />
-                </HBox>
-                <HBox spacing="10.0">
+                <HBox alignment="CENTER" prefHeight="69.0" prefWidth="240.0" spacing="10.0">
                     <Text fill="WHITE" text="Date of Birth:" wrappingWidth="100.0">
                         <font>
                             <Font name="System Bold" size="16.0" />
@@ -53,7 +45,22 @@
                     </Text>
                     <TextField fx:id="dateOfBirthField" style="-fx-background-radius: 5; -fx-border-radius: 5;" />
                 </HBox>
-                <HBox spacing="10.0">
+            </VBox>
+
+            <!-- Empty VBox for spacing between columns -->
+            <VBox prefWidth="50.0" />
+
+            <!-- Second Column (Last Name and Username) -->
+            <VBox prefHeight="199.0" prefWidth="245.0" spacing="15.0">
+                <HBox alignment="CENTER" prefHeight="62.0" prefWidth="261.0" spacing="10.0">
+                    <Text fill="WHITE" text="Lastname:" wrappingWidth="100.0">
+                        <font>
+                            <Font name="System Bold" size="16.0" />
+                        </font>
+                    </Text>
+                    <TextField fx:id="lastNameField" style="-fx-background-radius: 5; -fx-border-radius: 5;" />
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="61.0" prefWidth="237.0" spacing="10.0">
                     <Text fill="WHITE" text="Username:" wrappingWidth="100.0">
                         <font>
                             <Font name="System Bold" size="16.0" />
@@ -62,28 +69,14 @@
                     <TextField fx:id="usernameField" style="-fx-background-radius: 5; -fx-border-radius: 5;" />
                 </HBox>
             </VBox>
-
-            <!-- Movies Table -->
-            <VBox prefWidth="270.0" spacing="10.0">
-                <Text fill="WHITE" text="Your Booked Movies" wrappingWidth="200.0">
-                    <font>
-                        <Font name="System Bold" size="16.0" />
-                    </font>
-                </Text>
-                <TableView fx:id="moviesTable" prefHeight="200.0" prefWidth="400.0">
-                    <columns>
-                        <TableColumn fx:id="movieColumn" text="Movie Name" />
-                        <TableColumn fx:id="ticketsColumn" text="Tickets" />
-                    </columns>
-                </TableView>
-                <Text fx:id="totalDueText" layoutX="50.0" layoutY="440.0" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Due: $0.0" wrappingWidth="200.0">
-                    <font>
-                        <Font name="System Bold" size="16.0" />
-                    </font>
-                </Text>
-
-            </VBox>
         </HBox>
+
+        <!-- Total Due Text (Centered) -->
+        <Text fx:id="totalDueText" fill="WHITE" layoutX="250.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Due: $0.0" textAlignment="CENTER" wrappingWidth="200.0">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Text>
 
         <!-- Back Button -->
         <Button fx:id="backButton" layoutX="290.0" layoutY="430.0" onAction="#handleBackButton" prefHeight="45.0" prefWidth="120.0" style="-fx-background-color: linear-gradient(#ff6f61, #ff4757); -fx-text-fill: white; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #d63031; -fx-border-width: 2;" text="Back">
