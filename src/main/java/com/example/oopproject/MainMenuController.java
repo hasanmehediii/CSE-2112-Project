@@ -67,7 +67,20 @@ public class MainMenuController {
 
     @FXML
     public void handleBooked() {
-        System.out.println("Booked button clicked");
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("booking.fxml"));
+            AnchorPane root = loader.load();
+            BookingController controller = loader.getController();
+            controller.setUser(currentUser);
+            Stage stage = new Stage();
+            stage.setTitle("Booked Movies");
+            stage.setScene(new Scene(root, 720, 600));
+            stage.show();
+            Stage currentStage = (Stage) bookingButton.getScene().getWindow();
+            currentStage.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
@@ -86,6 +99,7 @@ public class MainMenuController {
             e.printStackTrace();
         }
     }
+
     @FXML
     public void animateButton(javafx.scene.input.MouseEvent event) {
         Button button = (Button) event.getSource();

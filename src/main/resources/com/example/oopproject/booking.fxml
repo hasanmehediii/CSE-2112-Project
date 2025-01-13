@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: linear-gradient(to bottom, #000428, #004e92);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oopproject.BookingController">
+
+    <VBox alignment="CENTER" spacing="20.0">
+        <!-- Center the VBox dynamically within the AnchorPane -->
+        <AnchorPane.leftAnchor>0.0</AnchorPane.leftAnchor>
+        <AnchorPane.rightAnchor>0.0</AnchorPane.rightAnchor>
+        <AnchorPane.topAnchor>0.0</AnchorPane.topAnchor>
+        <AnchorPane.bottomAnchor>0.0</AnchorPane.bottomAnchor>
+
+        <Label text="Booked Movies" textAlignment="CENTER">
+            <font>
+                <Font name="System Bold" size="30.0" />
+            </font>
+            <textFill>
+                <LinearGradient endX="1.0" endY="1.0">
+                    <stops>
+                        <Stop>
+                            <color>
+                                <Color red="1.0" green="0.8166666626930237" />
+                            </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                            <color>
+                                <Color red="0.8166666626930237" blue="1.0" />
+                            </color>
+                        </Stop>
+                    </stops>
+                </LinearGradient>
+            </textFill>
+        </Label>
+        <ImageView fitHeight="110.0" fitWidth="134.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@user-login.png" />
+        </ImageView>
+        <TableView fx:id="bookingTable" prefHeight="159.0" prefWidth="600.0">
+            <columns>
+                <TableColumn fx:id="movieNameColumn" prefWidth="250.0" text="Movie Name" />
+                <TableColumn fx:id="ticketCountColumn" prefWidth="250.0" text="Tickets" />
+            </columns>
+        </TableView>
+        <Button fx:id="backButton" onAction="#handleBackButton" prefHeight="45.0" prefWidth="120.0" style="-fx-background-color: linear-gradient(#ff6f61, #ff4757); -fx-text-fill: white; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #d63031; -fx-border-width: 2;" text="Back">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+            <effect>
+                <DropShadow color="black" offsetX="2" offsetY="2" radius="10" />
+            </effect>
+        </Button>
+    </VBox>
+
+</AnchorPane>

@@ -13,79 +13,80 @@
 <?import javafx.scene.text.Text?>
 
 <StackPane style="-fx-background-color: linear-gradient(to bottom, #000428, #004e92);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oopproject.ProfileController">
-    <AnchorPane maxHeight="500.0" maxWidth="700.0" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: linear-gradient(to bottom, #000428, #004e92); -fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 15;">
+    <AnchorPane maxHeight="500.0" maxWidth="700.0" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: linear-gradient(to bottom, #000428, #004e92); -fx-border-color: #00aaff; -fx-border-width: 2; -fx-border-radius: 20; -fx-background-radius: 20; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 20, 0.3, 0, 4);">
         <!-- User Image -->
-        <ImageView fitHeight="130.0" fitWidth="132.0" layoutX="285.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="103.0" fitWidth="126.0" layoutX="299.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
             <Image url="@user.png" />
+            <effect>
+                <DropShadow color="#0096c7" radius="20" spread="0.2" />
+            </effect>
         </ImageView>
 
-        <Text fill="WHITE" layoutX="250.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Profile Information" textAlignment="CENTER" wrappingWidth="200.0">
+        <Text fill="#0096c7" layoutX="250.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Profile Information" textAlignment="CENTER" wrappingWidth="200.0">
             <font>
-                <Font name="System Bold" size="20.0" />
+                <Font name="Arial Bold" size="24.0" />
             </font>
         </Text>
 
         <!-- Profile Information (Split into two columns) -->
-        <HBox layoutX="50.0" layoutY="209.0" prefHeight="199.0" prefWidth="600.0" spacing="40.0">
+        <HBox layoutX="50.0" layoutY="220.0" prefHeight="200.0" prefWidth="600.0" spacing="40.0">
             <!-- First Column (First Name and Date of Birth) -->
-            <VBox prefWidth="250.0" spacing="15.0">
-                <HBox alignment="CENTER" prefHeight="59.0" prefWidth="240.0" spacing="10.0">
-                    <Text fill="WHITE" text="Firstname:" wrappingWidth="100.0">
+            <VBox prefWidth="250.0" spacing="20.0">
+                <HBox spacing="10.0">
+                    <Text fill="#00a8ff" text="Firstname:" wrappingWidth="100.0">
                         <font>
-                            <Font name="System Bold" size="16.0" />
+                            <Font name="Arial Bold" size="16.0" />
                         </font>
                     </Text>
-                    <TextField fx:id="firstNameField" style="-fx-background-radius: 5; -fx-border-radius: 5;" />
+                    <TextField fx:id="firstNameField" style="-fx-background-color: #f0f4f8; -fx-background-radius: 10; -fx-border-color: #a8dadc; -fx-border-radius: 10; -fx-padding: 5;" />
                 </HBox>
-                <HBox alignment="CENTER" prefHeight="69.0" prefWidth="240.0" spacing="10.0">
-                    <Text fill="WHITE" text="Date of Birth:" wrappingWidth="100.0">
+                <HBox spacing="10.0">
+                    <Text fill="#008cff" text="Date of Birth:" wrappingWidth="100.0">
                         <font>
-                            <Font name="System Bold" size="16.0" />
+                            <Font name="Arial Bold" size="16.0" />
                         </font>
                     </Text>
-                    <TextField fx:id="dateOfBirthField" style="-fx-background-radius: 5; -fx-border-radius: 5;" />
+                    <TextField fx:id="dateOfBirthField" style="-fx-background-color: #f0f4f8; -fx-background-radius: 10; -fx-border-color: #a8dadc; -fx-border-radius: 10; -fx-padding: 5;" />
                 </HBox>
             </VBox>
 
-            <!-- Empty VBox for spacing between columns -->
-            <VBox prefWidth="50.0" />
-
             <!-- Second Column (Last Name and Username) -->
-            <VBox prefHeight="199.0" prefWidth="245.0" spacing="15.0">
-                <HBox alignment="CENTER" prefHeight="62.0" prefWidth="261.0" spacing="10.0">
-                    <Text fill="WHITE" text="Lastname:" wrappingWidth="100.0">
+            <VBox prefWidth="250.0" spacing="20.0">
+                <HBox spacing="10.0">
+                    <Text fill="#00b7ff" text="Lastname:" wrappingWidth="100.0">
                         <font>
-                            <Font name="System Bold" size="16.0" />
+                            <Font name="Arial Bold" size="16.0" />
                         </font>
                     </Text>
-                    <TextField fx:id="lastNameField" style="-fx-background-radius: 5; -fx-border-radius: 5;" />
+                    <TextField fx:id="lastNameField" style="-fx-background-color: #f0f4f8; -fx-background-radius: 10; -fx-border-color: #a8dadc; -fx-border-radius: 10; -fx-padding: 5;" />
                 </HBox>
-                <HBox alignment="CENTER" prefHeight="61.0" prefWidth="237.0" spacing="10.0">
-                    <Text fill="WHITE" text="Username:" wrappingWidth="100.0">
+                <HBox spacing="10.0">
+                    <Text fill="#009dff" text="Username:" wrappingWidth="100.0">
                         <font>
-                            <Font name="System Bold" size="16.0" />
+                            <Font name="Arial Bold" size="16.0" />
                         </font>
                     </Text>
-                    <TextField fx:id="usernameField" style="-fx-background-radius: 5; -fx-border-radius: 5;" />
+                    <TextField fx:id="usernameField" style="-fx-background-color: #f0f4f8; -fx-background-radius: 10; -fx-border-color: #a8dadc; -fx-border-radius: 10; -fx-padding: 5;" />
                 </HBox>
             </VBox>
         </HBox>
 
         <!-- Total Due Text (Centered) -->
-        <Text fx:id="totalDueText" fill="WHITE" layoutX="250.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Due: $0.0" textAlignment="CENTER" wrappingWidth="200.0">
+        <Text fx:id="totalDueText" fill="#e63946" layoutX="260.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Due: $0.0" textAlignment="CENTER" wrappingWidth="200.0">
             <font>
-                <Font name="System Bold" size="16.0" />
+                <Font name="Arial Bold" size="18.0" />
             </font>
         </Text>
 
         <!-- Back Button -->
-        <Button fx:id="backButton" layoutX="290.0" layoutY="430.0" onAction="#handleBackButton" prefHeight="45.0" prefWidth="120.0" style="-fx-background-color: linear-gradient(#ff6f61, #ff4757); -fx-text-fill: white; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #d63031; -fx-border-width: 2;" text="Back">
+        <Button fx:id="backButton" layoutX="290.0" layoutY="430.0" onAction="#handleBackButton" prefHeight="45.0" prefWidth="140.0" style="-fx-background-color: linear-gradient(#48cae4, #0096c7); -fx-text-fill: white; -fx-background-radius: 25; -fx-border-radius: 25; -fx-border-color: #023e8a; -fx-border-width: 2;">
             <font>
-                <Font name="System Bold" size="16.0" />
+                <Font name="Arial Bold" size="16.0" />
             </font>
             <effect>
-                <DropShadow color="black" offsetX="2" offsetY="2" radius="10" />
+                <DropShadow color="#023e8a" offsetX="2" offsetY="2" radius="10" />
             </effect>
+            <text>Back</text>
         </Button>
     </AnchorPane>
 </StackPane>
