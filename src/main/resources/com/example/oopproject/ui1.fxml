@@ -13,15 +13,6 @@
 
 <StackPane prefHeight="493.0" prefWidth="584.0" style="-fx-background-image: url('file:src/main/resources/com/example/oopproject/background.jpg'); -fx-background-size: cover;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oopproject.UI1Controller">
    <VBox alignment="CENTER" spacing="20" style="-fx-padding: 20;">
-      <!-- Back Button -->
-      <Button fx:id="backButton" onAction="#handleBackButton" prefHeight="45.0" prefWidth="120.0" style="-fx-background-color: linear-gradient(#ff6f61, #ff4757); -fx-text-fill: white; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #d63031; -fx-border-width: 2;" text="Back">
-         <font>
-            <Font name="System Bold" size="16.0" />
-         </font>
-         <effect>
-            <DropShadow color="black" offsetX="2" offsetY="2" radius="10" />
-         </effect>
-      </Button>
 
       <!-- Title Label -->
       <Label alignment="CENTER" prefHeight="29.0" prefWidth="450.0" style="-fx-background-color: rgba(0,0,0,0.7); -fx-background-radius: 20;" text="Select Movies from here">
@@ -79,15 +70,28 @@
             <DropShadow color="#48dbfb" offsetX="3" offsetY="3" radius="10" />
          </effect>
       </Label>
-
-      <!-- Select Button -->
-      <Button fx:id="selectButton" mnemonicParsing="false" onAction="#handleSelectButton" prefHeight="45.0" prefWidth="120.0" style="-fx-background-color: linear-gradient(#ff3838, #ff4d4d); -fx-text-fill: white; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #ff6b6b; -fx-border-width: 2;" text="Select">
-         <font>
-            <Font name="Consolas Bold" size="18.0" />
-         </font>
-         <effect>
-            <DropShadow color="black" offsetX="3" offsetY="3" radius="8" />
-         </effect>
-      </Button>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+         <children>
+            <!-- Back Button -->
+            <Button fx:id="backButton" onAction="#handleBackButton" prefHeight="45.0" prefWidth="120.0" style="-fx-background-color: linear-gradient(#ff6f61, #ff4757); -fx-text-fill: white; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #d63031; -fx-border-width: 2;" text="Back">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <effect>
+                  <DropShadow color="black" offsetX="2" offsetY="2" radius="10" />
+               </effect>
+            </Button>
+      
+            <!-- Select Button -->
+            <Button fx:id="selectButton" mnemonicParsing="false" onAction="#handleSelectButton" prefHeight="45.0" prefWidth="120.0" style="-fx-background-color: linear-gradient(#1dd1a1, #10ac84); -fx-text-fill: white; -fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: green; -fx-border-width: 2;" text="Select">
+               <font>
+                  <Font name="Consolas Bold" size="18.0" />
+               </font>
+               <effect>
+                  <DropShadow color="black" offsetX="3" offsetY="3" radius="8" />
+               </effect>
+            </Button>
+         </children>
+      </HBox>
    </VBox>
 </StackPane>
