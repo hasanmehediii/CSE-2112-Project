@@ -58,6 +58,9 @@
         </HBox>
       <HBox alignment="CENTER" prefHeight="62.0" prefWidth="700.0" spacing="20.0">
          <children>
+         
+             <!-- Back Button -->
+             <Button fx:id="BackButton" onAction="#handleBack" prefHeight="49.0" prefWidth="196.0" style="-fx-background-color: linear-gradient(to bottom, #ff7e5f, #ff6347); -fx-background-radius: 25; -fx-text-fill: white; -fx-font-size: 20px; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 5); -fx-font-weight: bold;" text="Back" />
       
               <!-- Submit Button -->
               <Button onAction="#handleSubmit" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(to bottom, #38ef7d, #11998e);                        -fx-background-radius: 25;                        -fx-text-fill: white;                        -fx-font-size: 20px;             -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 5);                        -fx-font-weight: bold;" text="Submit">
@@ -65,9 +68,6 @@
                       <InnerShadow color="#0d6647" radius="5.0" />
                   </effect>
               </Button>
-         
-             <!-- Back Button -->
-             <Button fx:id="BackButton" onAction="#handleBack" prefHeight="49.0" prefWidth="196.0" style="-fx-background-color: linear-gradient(to bottom, #ff7e5f, #ff6347); -fx-background-radius: 25; -fx-text-fill: white; -fx-font-size: 20px; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 5); -fx-font-weight: bold;" text="Back" />
          </children>
       </HBox>
 
