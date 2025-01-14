@@ -6,7 +6,7 @@ Welcome here **JavaFX Ticket Booking App**. This is a basic type Ticket Booker D
 
 ## Attachments
 
-  - [Video](https://www.youtube.com/url_of_this_video)
+  - [Video](https://youtu.be/9xgje1eX97o)
   - [PDF](readmepic/Project.pdf)
 
 ---
