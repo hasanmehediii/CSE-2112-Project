@@ -37,10 +37,10 @@
       </Label>
       <HBox alignment="CENTER" prefHeight="117.0" prefWidth="600.0" spacing="10.0">
          <ImageView fitHeight="147.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-            <Image url="@dev1.png" />
+            <Image url="@devo1.png" />
          </ImageView>
          <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-            <Image url="@dev2.png" />
+            <Image url="@devo2.png" />
          </ImageView>
       </HBox>
       <HBox alignment="TOP_CENTER" prefHeight="61.0" prefWidth="600.0" spacing="20.0">

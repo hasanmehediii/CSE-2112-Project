@@ -200,4 +200,27 @@ public class AdminController {
         alert.setContentText(message);
         alert.showAndWait();
     }
+
+    @FXML
+    public void handleLogout(javafx.event.ActionEvent actionEvent) {
+        try {
+            // Load the login.fxml file
+            javafx.fxml.FXMLLoader loader = new javafx.fxml.FXMLLoader(getClass().getResource("login.fxml"));
+            javafx.scene.Parent root = loader.load();
+
+            // Create a new stage for the login window
+            javafx.stage.Stage stage = new javafx.stage.Stage();
+            stage.setTitle("Login");
+            stage.setScene(new javafx.scene.Scene(root, 720, 600));
+            stage.show();
+
+            // Close the current stage
+            javafx.stage.Stage currentStage = (javafx.stage.Stage) ((javafx.scene.Node) actionEvent.getSource()).getScene().getWindow();
+            currentStage.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+            showAlert("Error", "Unable to load the login screen: " + e.getMessage());
+        }
+    }
+
 }

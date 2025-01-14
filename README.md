@@ -65,9 +65,9 @@ _Ticket Buying Screen._
  ```bash
  git clone "https://www.github.com/hasan-mehedii/CSE-2112-Project"
 ```
-2. Open the project in your preferred IDE.
-3. Add the JavaFX libraries to the build path.
-4. Run the Main class to launch the application.
+1. Open the project in your preferred IDE.
+2. Add the JavaFX libraries to the build path.
+3. Run the Main class to launch the application.
 
 ---
 
@@ -97,10 +97,12 @@ _Ticket Buying Screen._
 If you have any questions, feedback, or suggestions, feel free to reach out!  
 
 ### 👤 Mehedi Hasan  
-- **Email**: [mehedi-2022415897@cs.du.ac.bd](mailto:mehedi-2022415897@cs.du.ac.bd)  
+- **Email**: [mehedi-2022415897@cs.du.ac.bd](mailto:mehedi-2022415897@cs.du.ac.bd)
+- **GitHub**: [hasan-mehedii](https://www.github.com/hasan-mehedii)
 - **Institution**: CSE, University of Dhaka 
 
 ### 👤 Ibna Afra Roza  
-- **Email**: [ibnaafra-2022015891@cs.du.ac.bd](mailto:ibnaafra-2022015891@cs.du.ac.bd)  
+- **Email**: [ibnaafra-2022015891@cs.du.ac.bd](mailto:ibnaafra-2022015891@cs.du.ac.bd)
+- **GitHub**: [Roza-fail](https://www.github.com/Roza-fail)
 - **Institution**: CSE, University of Dhaka 
 

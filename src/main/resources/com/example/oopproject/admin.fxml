@@ -33,7 +33,7 @@
             </LinearGradient>
         </textFill>
     </Label>
-    <TableView fx:id="movieTable" prefHeight="400" prefWidth="800" style="-fx-background-color: linear-gradient(to bottom, #000080, #4682b4);">
+    <TableView fx:id="movieTable" prefHeight="340.0" prefWidth="800" style="-fx-background-color: linear-gradient(to bottom, #000080, #4682b4);">
         <columns>
             <TableColumn fx:id="titleColumn" text="Title" />
             <TableColumn fx:id="priceColumn" text="Price($)" />
@@ -51,34 +51,13 @@
 
     <HBox alignment="CENTER" spacing="20">
         <!-- Add Movie Button -->
-        <Button onAction="#onAddMovie" prefHeight="50.0" prefWidth="150.0"
-                style="-fx-background-color: linear-gradient(to bottom, #FFD700, #FFA500);
-                       -fx-background-radius: 25;
-                       -fx-text-fill: black;
-                       -fx-font-size: 18px;
-                       -fx-font-weight: bold;
-                       -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 5);"
-                text="Add Movie" />
+        <Button onAction="#onAddMovie" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: linear-gradient(to bottom, #FFD700, #FFA500);                        -fx-background-radius: 25;                        -fx-text-fill: black;                        -fx-font-size: 18px;                        -fx-font-weight: bold;                        -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 5);" text="Add Movie" />
 
         <!-- Delete Movie Button -->
-        <Button onAction="#onDeleteMovie" prefHeight="50.0" prefWidth="150.0"
-                style="-fx-background-color: linear-gradient(to bottom, #FF6347, #FF4500);
-                       -fx-background-radius: 25;
-                       -fx-text-fill: white;
-                       -fx-font-size: 18px;
-                       -fx-font-weight: bold;
-                       -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 5);"
-                text="Delete Movie" />
+        <Button onAction="#onDeleteMovie" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: linear-gradient(to bottom, #FF6347, #FF4500);                        -fx-background-radius: 25;                        -fx-text-fill: white;                        -fx-font-size: 18px;                        -fx-font-weight: bold;                        -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 5);" text="Delete Movie" />
 
         <!-- Save Changes Button -->
-        <Button onAction="#onSaveChanges" prefHeight="50.0" prefWidth="180.0"
-                style="-fx-background-color: linear-gradient(to bottom, #38ef7d, #11998e);
-                       -fx-background-radius: 25;
-                       -fx-text-fill: white;
-                       -fx-font-size: 18px;
-                       -fx-font-weight: bold;
-                       -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 5);"
-                text="Save Changes" />
+        <Button onAction="#onSaveChanges" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: linear-gradient(to bottom, #38ef7d, #11998e);                        -fx-background-radius: 25;                        -fx-text-fill: white;                        -fx-font-size: 18px;                        -fx-font-weight: bold;                        -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 5);" text="Save Changes" />
     </HBox>
 
     <Label text="For making any change, press enter to save">
@@ -102,4 +81,5 @@
             </LinearGradient>
         </textFill>
     </Label>
+   <Button mnemonicParsing="false" onAction="#handleLogout" style="-fx-background-color: linear-gradient(to bottom, #FF6347, #FF4500); -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 5); -fx-background-radius: 25; -fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" text="LogOut" />
 </VBox>
