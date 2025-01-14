@@ -34,17 +34,27 @@ public class BookingController {
             while ((line = reader.readLine()) != null) {
                 String[] data = line.split("\\|");
                 if (data[0].equals(currentUser.getUsername())) {
-                    String bookingDetails = data[data.length - 1];
+                    String bookingDetails = data[data.length - 1].trim();
+
+                    // Skip if the booking details are "None"
                     if (!"None".equals(bookingDetails)) {
                         String[] bookingsArray = bookingDetails.split(", ");
                         for (String booking : bookingsArray) {
-                            String[] details = booking.split(" \\(");
-                            String movieName = details[0];
-                            String tickets = details[1].replaceAll("\\D", "");
-                            bookings.add(new String[]{movieName, tickets});
+                            if (booking.contains(" (")) {
+                                String[] details = booking.split(" \\(");
+                                if (details.length == 2) {
+                                    String movieName = details[0].trim();
+                                    String tickets = details[1].replaceAll("\\D", "").trim();
+                                    bookings.add(new String[]{movieName, tickets});
+                                } else {
+                                    System.err.println("Malformed booking entry: " + booking);
+                                }
+                            } else if (!"None".equals(booking)) {
+                                System.err.println("Skipping invalid booking format: " + booking);
+                            }
                         }
                     }
-                    break;
+                    break; // Exit loop once the relevant user data is found
                 }
             }
         } catch (Exception e) {
@@ -53,6 +63,7 @@ public class BookingController {
 
         bookingTable.setItems(bookings);
     }
+
 
     @FXML
     public void initialize() {
