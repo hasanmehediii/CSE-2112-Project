@@ -7,7 +7,7 @@ Welcome here **JavaFX Ticket Booking App**. This is a basic type Ticket Booker D
 ## Attachments
 
   - [Video](https://www.youtube.com/url_of_this_video)
-  - [PDF](Project.pdf)
+  - [PDF](readmepic/Project.pdf)
 
 ---
 
@@ -18,12 +18,20 @@ Welcome here **JavaFX Ticket Booking App**. This is a basic type Ticket Booker D
 - **Browse Movies**: View the list of movies available for booking.
 - **View Details**: Check movie price, available seats, and timeslots.
 - **Book Tickets**: Reserve your seat if available.
+- **Check Profile**: Visit profile for look back the data and due(Update not possible)
+- **Check Tickets**: Look back to the tickets that user have already booked. 
 
 ### 🛠️ Admin Features
 - **Add Movies**: Add new movies with details like title, price, and timeslots.
 - **Edit Details**: Modify seat availability, timeslot information, and more.
 - **Remove Movies**: Delete movies directly from the database.
 - **File Management**: Data is stored in `movie_database.txt`.
+
+---
+
+## 🔐 Admin Credentials
+  - **Username:** admin123
+  - **Password:** 1234
 
 ---
 
@@ -63,12 +71,6 @@ _Ticket Buying Screen._
 
 ---
 
-## 🔐 Admin Credentials
-  - **Username:** admin123
-  - **Password:** 1234
-
----
-
 ## 📖 Usage
 
 ### For Users
@@ -85,7 +87,6 @@ _Ticket Buying Screen._
 
 ## 🌟 Future Enhancements
 - 🗄️ Database integration (e.g., MySQL) for scalable data management.
-- 👥 User login system to save booking history.
 - 💳 Payment gateway integration for online ticket booking.
 - 🎭 Graphical seat selection interface.
 
@@ -97,9 +98,9 @@ If you have any questions, feedback, or suggestions, feel free to reach out!
 
 ### 👤 Mehedi Hasan  
 - **Email**: [mehedi-2022415897@cs.du.ac.bd](mailto:mehedi-2022415897@cs.du.ac.bd)  
-- **University**: CSE, University of Dhaka 
+- **Institution**: CSE, University of Dhaka 
 
 ### 👤 Ibna Afra Roza  
 - **Email**: [ibnaafra-2022015891@cs.du.ac.bd](mailto:ibnaafra-2022015891@cs.du.ac.bd)  
-- **University**: CSE, University of Dhaka 
+- **Institution**: CSE, University of Dhaka 
 
