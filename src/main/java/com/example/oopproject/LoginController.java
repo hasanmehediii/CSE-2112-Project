@@ -116,13 +116,13 @@ public class LoginController {
         // Recover Password option eita
         Button submitButton = new Button("Recover Password");
         submitButton.setStyle("-fx-background-color: linear-gradient(to right, #00c6ff, #0072ff);"
-                + "-fx-background-radius: 25; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold;"
+                + "-fx-background-radius: 25; -fx-text-fill: white; -fx-font-size: 16px; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 5); -fx-font-weight: bold;"
                 + "-fx-padding: 10 20;");
         submitButton.setOnMouseEntered(e -> submitButton.setStyle("-fx-background-color: linear-gradient(to right, #00e6ff, #0082ff);"
-                + "-fx-background-radius: 25; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold;"
+                + "-fx-background-radius: 25; -fx-text-fill: white; -fx-font-size: 16px; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 5); -fx-font-weight: bold;"
                 + "-fx-padding: 10 20;"));
         submitButton.setOnMouseExited(e -> submitButton.setStyle("-fx-background-color: linear-gradient(to right, #00c6ff, #0072ff);"
-                + "-fx-background-radius: 25; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold;"
+                + "-fx-background-radius: 25; -fx-text-fill: white; -fx-font-size: 16px; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 5); -fx-font-weight: bold;"
                 + "-fx-padding: 10 20;"));
 
         //password ekhane dekhabe
@@ -144,13 +144,13 @@ public class LoginController {
         // Close Button
         Button closeButton = new Button("Close");
         closeButton.setStyle("-fx-background-color: linear-gradient(to right, #ff7e5f, #ff6347);"
-                + "-fx-background-radius: 25; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold;"
+                + "-fx-background-radius: 25; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 5); -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold;"
                 + "-fx-padding: 10 20;");
         closeButton.setOnMouseEntered(e -> closeButton.setStyle("-fx-background-color: linear-gradient(to right, #ff927b, #ff7569);"
-                + "-fx-background-radius: 25; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold;"
+                + "-fx-background-radius: 25; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 5); -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold;"
                 + "-fx-padding: 10 20;"));
         closeButton.setOnMouseExited(e -> closeButton.setStyle("-fx-background-color: linear-gradient(to right, #ff7e5f, #ff6347);"
-                + "-fx-background-radius: 25; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold;"
+                + "-fx-background-radius: 25; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 5); -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold;"
                 + "-fx-padding: 10 20;"));
         closeButton.setOnAction(e -> popupStage.close());
 
