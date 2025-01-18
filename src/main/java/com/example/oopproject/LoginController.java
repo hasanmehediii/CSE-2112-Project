@@ -270,4 +270,20 @@ public class LoginController {
             errorLabel.setText("Error: Unable to load Sign-Up window.");
         }
     }
+
+    public void handleBackButton() {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("start.fxml"));
+            Parent root = fxmlLoader.load();
+
+            Stage currentStage = (Stage) usernameField.getScene().getWindow();
+            Scene loginScene = new Scene(root, 720, 600);
+            currentStage.setScene(loginScene);
+            currentStage.sizeToScene();
+            currentStage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+            errorLabel.setText("Error: Unable to load the Login window.");
+        }
+    }
 }

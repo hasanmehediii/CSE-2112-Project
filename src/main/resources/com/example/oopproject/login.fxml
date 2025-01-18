@@ -13,21 +13,21 @@
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: linear-gradient(to bottom, #000428, #004e92);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oopproject.LoginController">
-    <VBox alignment="CENTER" spacing="20" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+    <VBox alignment="CENTER" spacing="18.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <!-- Title -->
         <Label style="-fx-text-fill: white; -fx-font-size: 36px; -fx-font-weight: bold;" text="Login Page">
             <font>
                 <Font name="Arial Bold" size="36.0" />
             </font>
         </Label>
-        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="142.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true">
             <Image url="@teamwork.png" />
         </ImageView>
 
         <!-- Username -->
         <HBox alignment="CENTER" spacing="10">
             <Label style="-fx-text-fill: white; -fx-font-size: 24px; -fx-font-weight: bold;" text="Username:" />
-            <TextField fx:id="usernameField" prefHeight="50.0" prefWidth="300.0" style="-fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #ffffff; -fx-border-width: 2px; -fx-font-size: 20px;" />
+            <TextField fx:id="usernameField" prefHeight="37.0" prefWidth="300.0" style="-fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: #ffffff; -fx-border-width: 2px; -fx-font-size: 20px;" />
         </HBox>
 
         <!-- Password -->
@@ -61,9 +61,10 @@
         </HBox>
 
         <!-- Sign-Up Link -->
-        <Label alignment="CENTER" prefHeight="25.0" prefWidth="233.0" style="-fx-text-fill: white; -fx-font-size: 16px; -fx-underline: true; -fx-cursor: hand;" text="Forgot password?" onMouseClicked="#handleForgotPassword"/>
+        <Label alignment="CENTER" onMouseClicked="#handleForgotPassword" prefHeight="25.0" prefWidth="233.0" style="-fx-text-fill: white; -fx-font-size: 16px; -fx-underline: true; -fx-cursor: hand;" text="Forgot password?" />
 
         <!-- Error Label -->
         <Label fx:id="errorLabel" style="-fx-text-fill: red; -fx-font-size: 18px;" textAlignment="CENTER" />
+      <Button onAction="#handleBackButton" mnemonicParsing="false" style="-fx-background-color: linear-gradient(to bottom, #ff7e5f, #ff6347); -fx-background-radius: 25; -fx-text-fill: white; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 5); -fx-font-size: 20px; -fx-font-weight: bold;" text="Back" />
     </VBox>
 </AnchorPane>
