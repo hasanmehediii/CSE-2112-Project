@@ -5,6 +5,11 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
+import javafx.scene.layout.VBox;
+import javafx.geometry.Pos;
+import javafx.geometry.Insets;
+import javafx.stage.Modality;
+import javafx.scene.Node;
 import javafx.animation.FadeTransition;
 import javafx.animation.TranslateTransition;
 import javafx.util.Duration;
@@ -76,6 +81,109 @@ public class LoginController {
         }
     }
 
+    @FXML
+    public void handleForgotPassword() {
+        String username = usernameField.getText();
+        if (username.isEmpty()) {
+            errorLabel.setText("Enter username first!");
+            fadeErrorLabel();
+            return;
+        }
+
+        showForgotPasswordPopup(username);
+    }
+
+    private void showForgotPasswordPopup(String username) {
+        Stage popupStage = new Stage();
+        popupStage.setTitle("Recover Password");
+        popupStage.initModality(Modality.APPLICATION_MODAL);
+
+        VBox layout = new VBox(15);
+        layout.setAlignment(Pos.CENTER);
+        layout.setPadding(new Insets(20));
+        layout.setStyle("-fx-background-color: linear-gradient(to bottom, #000428, #004e92);"
+                + "-fx-background-radius: 15; -fx-border-radius: 15; -fx-border-color: white;");
+
+        Label instruction = new Label("Enter your Date of Birth (YYYY-MM-DD):");
+        instruction.setStyle("-fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold;");
+
+        // Date of Birth er text field
+        TextField dobField = new TextField();
+        dobField.setPromptText("YYYY-MM-DD");
+        dobField.setPrefWidth(250);
+        dobField.setStyle("-fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: white; -fx-padding: 5; -fx-font-size: 14px;");
+
+        // Recover Password option eita
+        Button submitButton = new Button("Recover Password");
+        submitButton.setStyle("-fx-background-color: linear-gradient(to right, #00c6ff, #0072ff);"
+                + "-fx-background-radius: 25; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold;"
+                + "-fx-padding: 10 20;");
+        submitButton.setOnMouseEntered(e -> submitButton.setStyle("-fx-background-color: linear-gradient(to right, #00e6ff, #0082ff);"
+                + "-fx-background-radius: 25; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold;"
+                + "-fx-padding: 10 20;"));
+        submitButton.setOnMouseExited(e -> submitButton.setStyle("-fx-background-color: linear-gradient(to right, #00c6ff, #0072ff);"
+                + "-fx-background-radius: 25; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold;"
+                + "-fx-padding: 10 20;"));
+
+        //password ekhane dekhabe
+        Label resultLabel = new Label();
+        resultLabel.setStyle("-fx-font-size: 14px; -fx-text-fill: white; -fx-font-weight: bold;");
+        submitButton.setOnAction(e -> {
+            String dob = dobField.getText().trim();
+            String password = getPasswordByDOB(username, dob);
+
+            if (password != null) {
+                resultLabel.setText("Your Password: " + password);
+                resultLabel.setStyle("-fx-text-fill: #38ef7d; -fx-font-size: 16px; -fx-font-weight: bold;");
+            } else {
+                resultLabel.setText("Incorrect DOB or username!");
+                resultLabel.setStyle("-fx-text-fill: red; -fx-font-size: 16px; -fx-font-weight: bold;");
+            }
+        });
+
+        // Close Button
+        Button closeButton = new Button("Close");
+        closeButton.setStyle("-fx-background-color: linear-gradient(to right, #ff7e5f, #ff6347);"
+                + "-fx-background-radius: 25; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold;"
+                + "-fx-padding: 10 20;");
+        closeButton.setOnMouseEntered(e -> closeButton.setStyle("-fx-background-color: linear-gradient(to right, #ff927b, #ff7569);"
+                + "-fx-background-radius: 25; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold;"
+                + "-fx-padding: 10 20;"));
+        closeButton.setOnMouseExited(e -> closeButton.setStyle("-fx-background-color: linear-gradient(to right, #ff7e5f, #ff6347);"
+                + "-fx-background-radius: 25; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold;"
+                + "-fx-padding: 10 20;"));
+        closeButton.setOnAction(e -> popupStage.close());
+
+        layout.getChildren().addAll(instruction, dobField, submitButton, resultLabel, closeButton);
+
+        Scene scene = new Scene(layout, 400, 250);
+        popupStage.setScene(scene);
+        popupStage.show();
+    }
+
+
+    private String getPasswordByDOB(String username, String dob) {
+        String dataFile = "src/main/java/com/example/oopproject/user_database.txt";
+        try (BufferedReader reader = new BufferedReader(new FileReader(dataFile))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                String[] parts = line.split("\\|");
+                if (parts.length >= 6) {
+                    String fileUsername = parts[0].trim();
+                    String filePassword = parts[1].trim();
+                    String fileDOB = parts[4].trim();
+
+                    if (fileUsername.equals(username) && fileDOB.equals(dob)) {
+                        return filePassword;
+                    }
+                }
+            }
+        } catch (IOException e) {
+            errorLabel.setText("Error reading credentials file.");
+        }
+        return null;
+    }
+
     private void fadeErrorLabel() {
         FadeTransition fadeError = new FadeTransition(Duration.millis(500), errorLabel);
         fadeError.setFromValue(0.0);
@@ -115,7 +223,6 @@ public class LoginController {
             Parent root = loader.load();
 
             MainMenuController mainMenuController = loader.getController();
-
             mainMenuController.setUser(loggedInUser);
 
             Stage currentStage = (Stage) usernameField.getScene().getWindow();

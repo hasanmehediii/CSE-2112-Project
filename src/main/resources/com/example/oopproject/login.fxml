@@ -61,7 +61,7 @@
         </HBox>
 
         <!-- Sign-Up Link -->
-        <Label prefHeight="25.0" prefWidth="233.0" style="-fx-text-fill: white; -fx-font-size: 16px;" text="Don't have an account? Sign-Up" textAlignment="CENTER" />
+        <Label alignment="CENTER" prefHeight="25.0" prefWidth="233.0" style="-fx-text-fill: white; -fx-font-size: 16px; -fx-underline: true; -fx-cursor: hand;" text="Forgot password?" onMouseClicked="#handleForgotPassword"/>
 
         <!-- Error Label -->
         <Label fx:id="errorLabel" style="-fx-text-fill: red; -fx-font-size: 18px;" textAlignment="CENTER" />
