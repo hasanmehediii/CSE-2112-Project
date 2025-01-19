@@ -75,16 +75,16 @@ _Ticket Buying Screen._
 ### 🔄 Git Workflow
 1. Create a new branch for changes:
    ```bash
-   git checkout -b feature-branch-name ```
+   git checkout -b feature-branch-name 
 2. Make changes in your code and stage them:
    ```bash
-   git add . ```
+   git add .
 3. Commit the changes with a message:
    ```bash
-   git commit -m "Describe the changes made" ```
+   git commit -m "Describe the changes made"
 4. Push the changes to GitHub:
    ```bash
-   git push origin feature-branch-name ```
+   git push origin feature-branch-name
 5. Create a pull request on GitHub:
    - Go to the repository on GitHub.
    - Click "Compare & pull request".
@@ -92,17 +92,17 @@ _Ticket Buying Screen._
    - Click "Create pull request".
 6. Switch to the main branch:
    ```bash
-   git checkout main ```
+   git checkout main 
 7. Pull the latest changes:
    ```bash
-   git pull origin main ```
+   git pull origin main 
 8. Merge updates into your feature branch:
    ```bash
    git checkout feature-branch-name
-   git merge main ```
+   git merge main 
 9. Push the updated feature branch:
     ```bash
-    git push origin feature-branch-name ```
+    git push origin feature-branch-name 
 
     
 ---
