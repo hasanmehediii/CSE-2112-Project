@@ -19,7 +19,8 @@ Welcome here **JavaFX Ticket Booking App**. This is a basic type Ticket Booker D
 - **View Details**: Check movie price, available seats, and timeslots.
 - **Book Tickets**: Reserve your seat if available.
 - **Check Profile**: Visit profile for look back the data and due(Update not possible)
-- **Check Tickets**: Look back to the tickets that user have already booked. 
+- **Check Tickets**: Look back to the tickets that user have already booked.
+- **Recover Password**: Recover the user id with date of birth in case of forget password
 
 ### 🛠️ Admin Features
 - **Add Movies**: Add new movies with details like title, price, and timeslots.
@@ -71,10 +72,45 @@ _Ticket Buying Screen._
 
 ---
 
+### 🔄 Git Workflow
+1. Create a new branch for changes:
+   ```bash
+   git checkout -b feature-branch-name ```
+2. Make changes in your code and stage them:
+   ```bash
+   git add . ```
+3. Commit the changes with a message:
+   ```bash
+   git commit -m "Describe the changes made" ```
+4. Push the changes to GitHub:
+   ```bash
+   git push origin feature-branch-name ```
+5. Create a pull request on GitHub:
+   - Go to the repository on GitHub.
+   - Click "Compare & pull request".
+   - Add a title and description.
+   - Click "Create pull request".
+6. Switch to the main branch:
+   ```bash
+   git checkout main ```
+7. Pull the latest changes:
+   ```bash
+   git pull origin main ```
+8. Merge updates into your feature branch:
+   ```bash
+   git checkout feature-branch-name
+   git merge main ```
+9. Push the updated feature branch:
+    ```bash
+    git push origin feature-branch-name ```
+
+    
+---
+
 ## 📖 Usage
 
 ### For Users
-1. Launch the app and browse movies.
+1. Login to the app and browse movies.
 2. Select a timeslot and check seat availability.
 3. Book tickets if seats are available.
 
