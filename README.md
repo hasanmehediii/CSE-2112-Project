@@ -85,11 +85,13 @@ _Ticket Buying Screen._
 4. Push the changes to GitHub:
    ```bash
    git push origin feature-branch-name
+   
 5. Create a pull request on GitHub:
    - Go to the repository on GitHub.
    - Click "Compare & pull request".
    - Add a title and description.
    - Click "Create pull request".
+     
 6. Switch to the main branch:
    ```bash
    git checkout main 
