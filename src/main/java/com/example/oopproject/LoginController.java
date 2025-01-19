@@ -238,7 +238,6 @@ public class LoginController {
     }
 
     private void openAdminDashboard() {
-        System.out.println("Admin Dashboard Opened");
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/oopproject/admin.fxml"));
             Parent root = loader.load();
