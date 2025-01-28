@@ -104,11 +104,9 @@ public class MainMenuController {
     public void animateButton(javafx.scene.input.MouseEvent event) {
         Button button = (Button) event.getSource();
 
-        // Create a FadeTransition for fading in the button
         FadeTransition fadeIn = new FadeTransition(Duration.millis(200), button);
-        fadeIn.setToValue(0.8); // Reduce opacity for the fade-in effect
+        fadeIn.setToValue(0.8);
 
-        // Play the fade-in animation
         fadeIn.play();
     }
 
@@ -116,11 +114,10 @@ public class MainMenuController {
     public void resetButtonAnimation(javafx.scene.input.MouseEvent event) {
         Button button = (Button) event.getSource();
 
-        // Create a FadeTransition for fading out the button
+        // 200 mili sec time e blur hoy
         FadeTransition fadeOut = new FadeTransition(Duration.millis(200), button);
-        fadeOut.setToValue(1.0); // Restore full opacity
+        fadeOut.setToValue(1.0);
 
-        // Play the fade-out animation
         fadeOut.play();
     }
 }

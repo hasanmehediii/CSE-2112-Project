@@ -51,14 +51,12 @@ public class AdminController {
     private TableColumn<Movie, String> available3Column;
 
     private ObservableList<Movie> movieList;
-    private final String FILE_PATH = "movie_database.txt";  // Ensure this path is correct
+    private final String FILE_PATH = "movie_database.txt";
 
     @FXML
     public void initialize() {
-        // Initialize the movie list
         movieList = FXCollections.observableArrayList(loadMoviesFromFile());
 
-        // Set up the table columns
         titleColumn.setCellValueFactory(data -> data.getValue().titleProperty());
         priceColumn.setCellValueFactory(data -> data.getValue().priceProperty());
         timeslot1Column.setCellValueFactory(data -> data.getValue().timeslot1Property());
@@ -73,16 +71,13 @@ public class AdminController {
         seats3Column.setCellValueFactory(data -> data.getValue().seats3Property().asObject());
         available3Column.setCellValueFactory(data -> data.getValue().available3Property());
 
-        // Set the table data
         movieTable.setItems(movieList);
 
-        // Allow editing the table cells
         movieTable.setEditable(true);
         setupEditableColumns();
     }
 
     private void setupEditableColumns() {
-        // String-based columns
         titleColumn.setCellFactory(TextFieldTableCell.forTableColumn());
         titleColumn.setOnEditCommit(event -> event.getRowValue().setTitle(event.getNewValue()));
 
@@ -120,7 +115,6 @@ public class AdminController {
 
     @FXML
     private void onAddMovie() {
-        // Add a new movie with default values for time slots
         Movie newMovie = new Movie("New Movie", "0.0", "Time 1", 10, "Available", "Time 2", 10, "Available", "Time 3", 10, "Available");
         movieList.add(newMovie);
         movieTable.getSelectionModel().select(newMovie);
@@ -128,7 +122,6 @@ public class AdminController {
 
     @FXML
     private void onDeleteMovie() {
-        // Get the selected movie and remove it from the list
         Movie selectedMovie = movieTable.getSelectionModel().getSelectedItem();
         if (selectedMovie != null) {
             movieList.remove(selectedMovie);
@@ -139,8 +132,7 @@ public class AdminController {
 
     @FXML
     private void onSaveChanges() {
-        // Save the movie data back to the file
-        saveMoviesToFile(new ArrayList<>(movieList)); // Convert ObservableList to List
+        saveMoviesToFile(new ArrayList<>(movieList));
         showAlert("Success", "Changes saved to the file.");
     }
 
