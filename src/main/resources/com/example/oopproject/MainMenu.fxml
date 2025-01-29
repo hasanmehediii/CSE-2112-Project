@@ -13,15 +13,36 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oopproject.MainMenuController">
     <!-- Background Image -->
-    <ImageView fx:id="backgroundImage" fitHeight="600.0" fitWidth="800.0">
+    <ImageView fx:id="backgroundImage" fitHeight="600.0" fitWidth="775.0">
         <Image url="@background.jpg" />
     </ImageView>
 
     <!-- Menu Buttons -->
-    <VBox alignment="CENTER" layoutX="261.0" layoutY="67.0" prefHeight="415.0" prefWidth="221.0" spacing="20.0">
-        <Label text="Main Menu">
+    <VBox alignment="CENTER" layoutX="155.0" layoutY="67.0" prefHeight="415.0" prefWidth="449.0" spacing="20.0">
+      <Label prefHeight="28.0" prefWidth="479.0" text="CSEDU Cinema Hall">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="0.8999999761581421" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color green="0.7333333492279053" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+        <Label prefHeight="40.0" prefWidth="232.0" text="Main Menu">
             <font>
-                <Font name="System Bold" size="28.0" />
+                <Font name="System Bold" size="43.0" />
             </font>
             <textFill>
                 <LinearGradient endX="1.0" endY="1.0">
@@ -42,23 +63,15 @@
         </Label>
 
         <!-- Select Movies Button -->
-        <Button fx:id="selectButton" onAction="#handleSelectMovies" prefHeight="47.0" prefWidth="161.0"
-                style="-fx-background-color: linear-gradient(to bottom, #ff9a9e, #fad0c4); -fx-background-radius: 25; -fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 5);"
-                text="Select Movies" onMouseEntered="#animateButton" onMouseExited="#resetButtonAnimation"/>
+        <Button fx:id="selectButton" onAction="#handleSelectMovies" onMouseEntered="#animateButton" onMouseExited="#resetButtonAnimation" prefHeight="47.0" prefWidth="161.0" style="-fx-background-color: linear-gradient(to bottom, #ff9a9e, #fad0c4); -fx-background-radius: 25; -fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 5);" text="Select Movies" />
 
         <!-- My Profile Button -->
-        <Button fx:id="profileButton" onAction="#handleProfile" prefHeight="44.0" prefWidth="166.0"
-                style="-fx-background-color: linear-gradient(to bottom, #a18cd1, #fbc2eb); -fx-background-radius: 25; -fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 5);"
-                text="My Profile" onMouseEntered="#animateButton" onMouseExited="#resetButtonAnimation"/>
+        <Button fx:id="profileButton" onAction="#handleProfile" onMouseEntered="#animateButton" onMouseExited="#resetButtonAnimation" prefHeight="44.0" prefWidth="166.0" style="-fx-background-color: linear-gradient(to bottom, #a18cd1, #fbc2eb); -fx-background-radius: 25; -fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 5);" text="My Profile" />
 
         <!-- Booked Button -->
-        <Button fx:id="bookingButton" onAction="#handleBooked" prefHeight="46.0" prefWidth="170.0"
-                style="-fx-background-color: linear-gradient(to bottom, #43e97b, #38f9d7); -fx-background-radius: 25; -fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 5);"
-                text="Booked" onMouseEntered="#animateButton" onMouseExited="#resetButtonAnimation"/>
+        <Button fx:id="bookingButton" onAction="#handleBooked" onMouseEntered="#animateButton" onMouseExited="#resetButtonAnimation" prefHeight="46.0" prefWidth="170.0" style="-fx-background-color: linear-gradient(to bottom, #43e97b, #38f9d7); -fx-background-radius: 25; -fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 5);" text="Booked" />
 
         <!-- LogOut Button -->
-        <Button fx:id="logoutButton" onAction="#handleLogout" prefHeight="45.0" prefWidth="171.0"
-                style="-fx-background-color: linear-gradient(to bottom, #667eea, #764ba2); -fx-background-radius: 25; -fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 5);"
-                text="LogOut" onMouseEntered="#animateButton" onMouseExited="#resetButtonAnimation"/>
+        <Button fx:id="logoutButton" onAction="#handleLogout" onMouseEntered="#animateButton" onMouseExited="#resetButtonAnimation" prefHeight="45.0" prefWidth="171.0" style="-fx-background-color: linear-gradient(to bottom, #667eea, #764ba2); -fx-background-radius: 25; -fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 5);" text="LogOut" />
     </VBox>
 </AnchorPane>
