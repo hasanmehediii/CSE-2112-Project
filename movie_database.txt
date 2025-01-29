@@ -11,7 +11,7 @@ CSEDU|100|8.30 AM|60|9 available|10.00 AM|10|3 available|6.00 PM|10|2 available
 Moana_2|1000.0|10.00 AM|100|25 available|3.00 PM|60|25 available|6.00 PM|10|5 available
 Barbie_2|90.0|9:00 AM|60|20 available|2:30 PM|50|10 available|6:30 PM|40|5 available
 Breaking_Bad|26.0|11:45 AM|50|21 available|3:00 PM|30|5 available|7:00 PM|20|2 available
-Forrest_Gump|90.0|9:00 AM|60|20 available|2:30 PM|50|10 available|6:30 PM|40|5 available
+Forrest_Gump|90.0|9:00 AM|60|20 available|2:30 PM|50|4 available|6:30 PM|40|5 available
 Get_Out|95.0|9:00 AM|60|20 available|2:30 PM|50|10 available|6:30 PM|40|5 available
 Gladiator|26.0|11:45 AM|50|20 available|3:00 PM|30|5 available|7:00 PM|20|2 available
 Gravity|26.0|11:45 AM|50|21 available|3:00 PM|30|5 available|7:00 PM|20|2 available
