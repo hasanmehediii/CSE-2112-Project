@@ -103,7 +103,7 @@ public class UI1Controller {
     @FXML
     private void handleSelectButton() {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("UI2.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("ui2.fxml"));
             Stage stage = new Stage();
             stage.setScene(new Scene(loader.load(), 720, 600));
             stage.setTitle("Movie Select Window");
