@@ -55,9 +55,9 @@ _Ticket Buying Screen._
 ## 🚀 Getting Started
 
 ### 🔧 Prerequisites
-1. **Java Development Kit (JDK)**: Version 11 or higher.
-2. **JavaFX SDK**: Ensure `javafx` modules are added.
-3. **IDE**: IntelliJ IDEA, Eclipse, or NetBeans recommended.
+1. **Java Development Kit (JDK)**: Version 11 or higher. (23.0.2 Recommended)
+2. **JavaFX SDK**: Ensure `javafx` modules are added. (23.0.2 Recommended)
+3. **IDE**: IntelliJ IDEA, Eclipse, or NetBeans recommended. (Intellij IDEA Recommended)
 
 ---
 
@@ -68,11 +68,11 @@ _Ticket Buying Screen._
 ```
 1. Open the project in your preferred IDE.
 2. Add the JavaFX libraries to the build path.
-3. Run the Main class to launch the application.
+3. Run the Main class (HelloApplication.java) to launch the application.
 
 ---
 
-### 🔄 Git Workflow
+### 🔄 Git Workflow (for contribution)
 1. Create a new branch for changes:
    ```bash
    git checkout -b feature-branch-name 
@@ -115,6 +115,8 @@ _Ticket Buying Screen._
 1. Login to the app and browse movies.
 2. Select a timeslot and check seat availability.
 3. Book tickets if seats are available.
+4. See the dashboard of user.
+5. Check the already booked tickets.
 
 ### For Admins
 1. Log in with admin credentials.
