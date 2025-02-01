@@ -40,6 +40,7 @@ public class MainMenuController {
             stage.setTitle("Select Movies");
             stage.setScene(new Scene(root, 720, 600));
             stage.show();
+            stage.setResizable(false);
             Stage currentStage = (Stage) selectButton.getScene().getWindow();
             currentStage.close();
         } catch (Exception e) {
@@ -57,6 +58,7 @@ public class MainMenuController {
             Stage stage = new Stage();
             stage.setTitle("My Profile");
             stage.setScene(new Scene(root, 720, 600));
+            stage.setResizable(false);
             stage.show();
             Stage currentStage = (Stage) profileButton.getScene().getWindow();
             currentStage.close();
@@ -75,6 +77,7 @@ public class MainMenuController {
             Stage stage = new Stage();
             stage.setTitle("Booked Movies");
             stage.setScene(new Scene(root, 720, 600));
+            stage.setResizable(false);
             stage.show();
             Stage currentStage = (Stage) bookingButton.getScene().getWindow();
             currentStage.close();
@@ -92,6 +95,7 @@ public class MainMenuController {
             Stage stage = new Stage();
             stage.setTitle("Login");
             stage.setScene(new Scene(root, 720, 600));
+            stage.setResizable(false);
             stage.show();
             Stage currentStage = (Stage) logoutButton.getScene().getWindow();
             currentStage.close();

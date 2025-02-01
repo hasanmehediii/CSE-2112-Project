@@ -90,6 +90,7 @@ public class StartController {
             aboutStage.setTitle("About Us");
             Scene aboutScene = new Scene(root, 720, 600);
             aboutStage.setScene(aboutScene);
+            aboutStage.setResizable(false);
             aboutStage.show();
         } catch (IOException e) {
             System.err.println("Error: Unable to load About Us window.");

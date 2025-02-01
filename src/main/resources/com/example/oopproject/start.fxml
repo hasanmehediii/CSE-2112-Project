@@ -11,22 +11,22 @@
 
     <VBox alignment="CENTER" layoutX="50.0" layoutY="121.0" prefHeight="321.0" prefWidth="555.0" spacing="20.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="121.0">
         <!-- Welcome Text -->
-        <Text text="JavaFX Movie Ticket Booking App!" textAlignment="CENTER" wrappingWidth="531.65625" style="-fx-fill: linear-gradient(to bottom, #54aef0, #ffcf00); -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0.5, 0, 0);">
+        <Text style="-fx-fill: linear-gradient(to bottom, #54aef0, #ffcf00); -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0.5, 0, 0);" text="JavaFX Movie Ticket Booking App!" textAlignment="CENTER" wrappingWidth="531.65625">
             <font>
                 <Font name="Arial Bold" size="34.0" />
             </font>
         </Text>
 
         <!-- Start Button -->
-        <Button fx:id="startButton" onAction="#start" prefHeight="41.0" prefWidth="200.0" text="Start" style="-fx-background-color: #ffcf00; -fx-text-fill: #000; -fx-font-size: 18px; -fx-font-weight: bold; -fx-padding: 10px 20px; -fx-border-radius: 15px; -fx-background-radius: 15px; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0.5, 0, 2);" />
+        <Button fx:id="startButton" onAction="#start" prefHeight="46.0" prefWidth="135.0" style="-fx-background-color: #ffcf00; -fx-text-fill: #000; -fx-font-size: 18px; -fx-font-weight: bold; -fx-padding: 10px 20px; -fx-border-radius: 35px; -fx-background-radius: 35px; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0.5, 0, 2);" text="Start" />
 
         <!-- About Us Button -->
-        <Button fx:id="aboutButton" onAction="#aboutUs" prefHeight="41.0" prefWidth="200.0" text="About Us" style="-fx-background-color: #0fff90; -fx-text-fill: #000; -fx-font-size: 18px; -fx-font-weight: bold; -fx-padding: 10px 20px; -fx-border-radius: 15px; -fx-background-radius: 15px; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0.5, 0, 2);" />
+        <Button fx:id="aboutButton" onAction="#aboutUs" prefHeight="46.0" prefWidth="129.0" style="-fx-background-color: #0fff90; -fx-text-fill: #000; -fx-font-size: 18px; -fx-font-weight: bold; -fx-padding: 10px 20px; -fx-border-radius: 35px; -fx-background-radius: 35px; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0.5, 0, 2);" text="About Us" />
 
         <!-- Exit Button -->
-        <Button fx:id="exitButton" onAction="#exit" prefHeight="41.0" prefWidth="200.0" text="Exit" style="-fx-background-color: #ff4d4d; -fx-text-fill: #fff; -fx-font-size: 18px; -fx-font-weight: bold; -fx-padding: 10px 20px; -fx-border-radius: 15px; -fx-background-radius: 15px; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0.5, 0, 2);" />
+        <Button fx:id="exitButton" onAction="#exit" prefHeight="46.0" prefWidth="138.0" style="-fx-background-color: #ff4d4d; -fx-text-fill: #fff; -fx-font-size: 18px; -fx-font-weight: bold; -fx-padding: 10px 20px; -fx-border-radius: 35px; -fx-background-radius: 35px; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0.5, 0, 2);" text="Exit" />
 
         <!-- Location Label -->
-        <Label alignment="CENTER" prefHeight="0.0" prefWidth="671.0" text="Location: University of Dhaka" textAlignment="CENTER" style="-fx-text-fill: #ffffff; -fx-font-size: 14px; -fx-background-color: rgba(0, 0, 0, 0.5); -fx-padding: 5px; -fx-border-radius: 10px; -fx-background-radius: 10px;" />
+        <Label alignment="CENTER" prefHeight="0.0" prefWidth="671.0" style="-fx-text-fill: #ffffff; -fx-font-size: 14px; -fx-background-color: rgba(0, 0, 0, 0.5); -fx-padding: 5px; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="Location: University of Dhaka" textAlignment="CENTER" />
     </VBox>
 </AnchorPane>

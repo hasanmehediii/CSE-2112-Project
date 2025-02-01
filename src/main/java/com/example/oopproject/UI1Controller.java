@@ -106,6 +106,7 @@ public class UI1Controller {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("ui2.fxml"));
             Stage stage = new Stage();
             stage.setScene(new Scene(loader.load(), 720, 600));
+            stage.setResizable(false);
             stage.setTitle("Movie Select Window");
 
             // Pass data to the second controller
@@ -129,6 +130,7 @@ public class UI1Controller {
             Stage stage = (Stage) backButton.getScene().getWindow(); // Get the current stage
             stage.setScene(new Scene(loader.load(), 720, 600)); // Set the scene for the stage
             stage.setTitle("Main Menu");
+            stage.setResizable(false);
 
             // Optionally, you can also pass the currentUser to the main menu if needed
             MainMenuController mainMenuController = loader.getController();

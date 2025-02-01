@@ -202,6 +202,7 @@ public class AdminController {
             javafx.stage.Stage stage = new javafx.stage.Stage();
             stage.setTitle("Login");
             stage.setScene(new javafx.scene.Scene(root, 720, 600));
+            stage.setResizable(false);
             stage.show();
 
             javafx.stage.Stage currentStage = (javafx.stage.Stage) ((javafx.scene.Node) actionEvent.getSource()).getScene().getWindow();

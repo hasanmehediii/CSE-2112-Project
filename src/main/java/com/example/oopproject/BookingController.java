@@ -82,6 +82,7 @@ public class BookingController {
             javafx.stage.Stage stage = (javafx.stage.Stage) backButton.getScene().getWindow();
             stage.setScene(new javafx.scene.Scene(loader.load(), 720, 600));
             stage.setTitle("Main Menu");
+            stage.setResizable(false);
 
             // Pass the currentUser to the main menu
             MainMenuController mainMenuController = loader.getController();

@@ -99,6 +99,7 @@ public class SignupController {
             Scene loginScene = new Scene(root, 720, 600);
             currentStage.setScene(loginScene);
             currentStage.sizeToScene();
+            currentStage.setResizable(false);
             currentStage.show();
         } catch (IOException e) {
             errorLabel.setText("Error: Unable to load Login window.");

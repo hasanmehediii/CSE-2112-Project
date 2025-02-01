@@ -229,6 +229,7 @@ public class LoginController {
             Scene mainMenuScene = new Scene(root, 720, 600);
             currentStage.setScene(mainMenuScene);
             currentStage.sizeToScene();
+            currentStage.setResizable(false);
             currentStage.show();
 
         } catch (IOException e) {
@@ -246,6 +247,7 @@ public class LoginController {
             Scene adminDashboardScene = new Scene(root, 720, 600);
             currentStage.setScene(adminDashboardScene);
             currentStage.setTitle("Admin Window");
+            currentStage.setResizable(false);
             currentStage.sizeToScene();
             currentStage.show();
         } catch (IOException e) {
@@ -262,6 +264,7 @@ public class LoginController {
             Stage currentStage = (Stage) usernameField.getScene().getWindow();
             Scene signUpScene = new Scene(root, 720, 600);
             currentStage.setScene(signUpScene);
+            currentStage.setResizable(false);
             currentStage.sizeToScene();
             currentStage.show();
 
@@ -279,6 +282,7 @@ public class LoginController {
             Scene loginScene = new Scene(root, 720, 600);
             currentStage.setScene(loginScene);
             currentStage.sizeToScene();
+            currentStage.setResizable(false);
             currentStage.show();
         } catch (IOException e) {
             e.printStackTrace();
