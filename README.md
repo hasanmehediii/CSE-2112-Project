@@ -45,7 +45,19 @@ _Start Menu Screen._
 ![Login](readmepic/login.png)  
 _Login Screen._
 
-![Movie_Select](readmepic/moviemenu.png)  
+![Signup](readmepic/signup.png)  
+_Signup Screen._
+
+![Forget Password](readmepic/forget.png)  
+_Forget Password Screen._
+
+![Admin](readmepic/admin.png)  
+_Admin Menu Screen._
+
+![Main Menu](readmepic/mainmenu.png)  
+_Main Menu Screen._
+
+![Movie_Select](readmepic/ui1.png)  
 _Movie Select Menu Screen._
 
 ![Buy](readmepic/moviebuy.png)  
