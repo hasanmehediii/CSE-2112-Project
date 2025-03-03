@@ -144,13 +144,12 @@ Welcome here **JavaFX Ticket Booking App**. This is a basic type Ticket Booker D
 
 If you have any questions, feedback, or suggestions, feel free to reach out!  
 
-### 👤 Mehedi Hasan  
-- **Email**: [mehedi-2022415897@cs.du.ac.bd](mailto:mehedi-2022415897@cs.du.ac.bd)
-- **GitHub**: [hasan-mehedii](https://www.github.com/hasan-mehedii)
-- **Institution**: CSE, University of Dhaka 
+## **Contributors 👤**  
 
-### 👤 Ibna Afra Roza  
-- **Email**: [ibnaafra-2022015891@cs.du.ac.bd](mailto:ibnaafra-2022015891@cs.du.ac.bd)
-- **GitHub**: [Roza-fail](https://www.github.com/Roza-fail)
-- **Institution**: CSE, University of Dhaka 
+| Mehedi Hasan | Ibna Afra Roza |
+|:------------:|:-------------:|
+| **Email**: [mehedi-2022415897@cs.du.ac.bd](mailto:mehedi-2022415897@cs.du.ac.bd) | **Email**: [ibnaafra-2022015891@cs.du.ac.bd](mailto:ibnaafra-2022015891@cs.du.ac.bd) |
+| **GitHub**: [hasan-mehedii](https://www.github.com/hasan-mehedii) | **GitHub**: [Roza-fail](https://www.github.com/Roza-fail) |
+| **Institution**: CSE, University of Dhaka | **Institution**: CSE, University of Dhaka |
+
 
