@@ -40,8 +40,6 @@ Welcome here **JavaFX Ticket Booking App**. This is a basic type Ticket Booker D
 
 ## **Screenshots 📸**
 
-## **Screenshots 📸**
-
 | ![Start](readmepic/start.png) | ![Login](readmepic/login.png) |
 |:-------------------:|:------------------:|
 | _Start Menu Screen._ | _Login Screen._ |
