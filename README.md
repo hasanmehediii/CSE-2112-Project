@@ -146,10 +146,19 @@ If you have any questions, feedback, or suggestions, feel free to reach out!
 
 ## **Contributors 👤**  
 
-| Mehedi Hasan | Ibna Afra Roza |
-|:------------:|:-------------:|
-| **Email**: [mehedi-2022415897@cs.du.ac.bd](mailto:mehedi-2022415897@cs.du.ac.bd) | **Email**: [ibnaafra-2022015891@cs.du.ac.bd](mailto:ibnaafra-2022015891@cs.du.ac.bd) |
-| **GitHub**: [hasan-mehedii](https://www.github.com/hasan-mehedii) | **GitHub**: [Roza-fail](https://www.github.com/Roza-fail) |
-| **Institution**: CSE, University of Dhaka | **Institution**: CSE, University of Dhaka |
-
-
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <h3>👤 Mehedi Hasan</h3>
+      <p><strong>Email:</strong> <a href="mailto:mehedi-2022415897@cs.du.ac.bd">mehedi-2022415897@cs.du.ac.bd</a></p>
+      <p><strong>GitHub:</strong> <a href="https://www.github.com/hasan-mehedii">hasan-mehedii</a></p>
+      <p><strong>Institution:</strong> CSE, University of Dhaka</p>
+    </td>
+    <td align="center" width="50%">
+      <h3>👤 Ibna Afra Roza</h3>
+      <p><strong>Email:</strong> <a href="mailto:ibnaafra-2022015891@cs.du.ac.bd">ibnaafra-2022015891@cs.du.ac.bd</a></p>
+      <p><strong>GitHub:</strong> <a href="https://www.github.com/Roza-fail">Roza-fail</a></p>
+      <p><strong>Institution:</strong> CSE, University of Dhaka</p>
+    </td>
+  </tr>
+</table>
