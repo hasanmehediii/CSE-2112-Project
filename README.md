@@ -70,7 +70,7 @@ Welcome here **JavaFX Ticket Booking App**. This is a basic type Ticket Booker D
 ### 📥 Installation
 1. Clone the repository:
  ```bash
- git clone "https://www.github.com/hasan-mehedii/CSE-2112-Project"
+ git clone "https://www.github.com/hasanmehediii/CSE-2112-Project"
 ```
 1. Open the project in your preferred IDE.
 2. Add the JavaFX libraries to the build path.
@@ -146,7 +146,7 @@ If you have any questions, feedback, or suggestions, feel free to reach out!
 
 ### 👤 Mehedi Hasan  
 - **Email**: [mehedi-2022415897@cs.du.ac.bd](mailto:mehedi-2022415897@cs.du.ac.bd)
-- **GitHub**: [hasan-mehedii](https://www.github.com/hasan-mehedii)
+- **GitHub**: [hasanmehediii](https://www.github.com/hasanmehediii)
 - **Institution**: CSE, University of Dhaka 
 
 ### 👤 Ibna Afra Roza  
