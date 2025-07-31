@@ -1,5 +1,11 @@
 ## JavaFX Movie Ticket Booker (CSE-2112-Project)
 
+<p align="center">
+  <img src="movies.png" alt="App Logo" width="150" height="150" style="border-radius: 50%; border: 2px solid #ccc;" />
+  <br>
+  <strong>JavaFX Movie Ticket Booking System</strong>
+</p>
+
 Welcome here **JavaFX Ticket Booking App**. This is a basic type Ticket Booker Desktop based GUI Application that provides a user to choice and select their movies for booking. There is both user and admin section. This is the 2nd Year 1st Semester Final Project for Object Oriented Programming (CSE-2112) Lab Course.
 
 ---
